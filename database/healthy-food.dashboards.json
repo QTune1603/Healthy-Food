@@ -1,0 +1,92 @@
+[{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b624c"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-05T17:00:00.000Z"
+  },
+  "stats": {
+    "totalCalories": 0,
+    "targetCalories": 2000,
+    "totalProtein": 0,
+    "totalCarbs": 0,
+    "totalFat": 0,
+    "totalFiber": 0,
+    "waterIntake": 0,
+    "exerciseMinutes": 0,
+    "steps": 0,
+    "sleep": 0
+  },
+  "bodyMetrics": {
+    "weight": 70,
+    "height": 170,
+    "bmi": 22,
+    "age": 25,
+    "activityLevel": "moderately_active",
+    "healthScore": 0
+  },
+  "scores": {
+    "nutrition": 0,
+    "exercise": 0,
+    "hydration": 0,
+    "sleep": 0,
+    "weight": 0,
+    "overall": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.442Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.442Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaba7c78de6221f6b6292"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-06T17:00:00.000Z"
+  },
+  "stats": {
+    "totalCalories": 0,
+    "targetCalories": 2000,
+    "totalProtein": 0,
+    "totalCarbs": 0,
+    "totalFat": 0,
+    "totalFiber": 0,
+    "waterIntake": 0,
+    "exerciseMinutes": 0,
+    "steps": 0,
+    "sleep": 0
+  },
+  "bodyMetrics": {
+    "weight": 70,
+    "height": 170,
+    "bmi": 22,
+    "age": 25,
+    "activityLevel": "moderately_active",
+    "healthScore": 0
+  },
+  "scores": {
+    "nutrition": 0,
+    "exercise": 0,
+    "hydration": 0,
+    "sleep": 0,
+    "weight": 0,
+    "overall": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T17:00:23.008Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T17:00:23.008Z"
+  },
+  "__v": 0
+}]

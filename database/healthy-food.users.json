@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "686a319f27b297b0c3d6ef28"
+  },
+  "fullName": "Admin HealthyFood",
+  "email": "admin@healthyfood.com",
+  "password": "$2b$10$gJlWKcoAClcBGqgq2u7LY.Qiuv43iUd5YKBd6dRZZrf2aQJpRfe2S",
+  "avatar": "https://i.pravatar.cc/300",
+  "role": "admin",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-06T08:19:43.241Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T08:19:43.241Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "fullName": "hungvo1",
+  "email": "hungvo@gmail.com",
+  "password": "$2a$10$ZflJVLMmKsA3PWadlnxDJOiqlttXR5MPl4T6XxhrOi/Ahy53hHkYO",
+  "phone": "0338782782",
+  "gender": "male",
+  "dateOfBirth": {
+    "$date": "2025-07-08T00:00:00.000Z"
+  },
+  "address": "hcm",
+  "avatar": "https://i.pravatar.cc/300",
+  "role": "user",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-06T08:24:20.799Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:46:31.616Z"
+  },
+  "__v": 0
+}]

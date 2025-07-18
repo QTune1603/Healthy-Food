@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "686aa7e6e54357520563f2c0"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "fullName": "test1",
+  "phone": "0337163992",
+  "address": "gialai\ngialai",
+  "city": "dannang",
+  "district": "test",
+  "ward": "test",
+  "isDefault": false,
+  "createdAt": {
+    "$date": "2025-07-06T16:44:22.364Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:46:22.935Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aa857e54357520563f2f8"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "fullName": "test2",
+  "phone": "0337163992",
+  "address": "gialai\ngialai",
+  "city": "dannang",
+  "district": "test2",
+  "ward": "test2",
+  "isDefault": true,
+  "createdAt": {
+    "$date": "2025-07-06T16:46:15.324Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:46:22.730Z"
+  },
+  "__v": 0
+}]

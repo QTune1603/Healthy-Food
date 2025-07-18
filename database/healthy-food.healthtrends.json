@@ -1,0 +1,624 @@
+[{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6242"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2024-08-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 72.91712345781374,
+    "bmi": 22.03598520354354,
+    "bodyFatPercentage": 15.231392739003876,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 79,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.432Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.432Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6246"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2024-09-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 76.84731440390632,
+    "bmi": 22.651813830170255,
+    "bodyFatPercentage": 24.636078395321082,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 61,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.435Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b624a"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2024-10-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 79.1697298787759,
+    "bmi": 22.37719660571942,
+    "bodyFatPercentage": 20.267993567057832,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 87,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.441Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.441Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6250"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2024-11-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 78.7273023919812,
+    "bmi": 22.588194993998425,
+    "bodyFatPercentage": 18.001699007835906,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 75,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.445Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.445Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6254"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2024-12-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 72.79989935709395,
+    "bmi": 22.261847092800558,
+    "bodyFatPercentage": 23.91563380966766,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 85,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.448Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.448Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6258"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-01-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 78.05843757761436,
+    "bmi": 23.054406350569533,
+    "bodyFatPercentage": 15.48579288584559,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 69,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.452Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.452Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b625b"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-02-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 76.6977352656826,
+    "bmi": 22.945971775322572,
+    "bodyFatPercentage": 20.28727112609912,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 66,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.456Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.456Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b625e"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-03-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 71.75869384783047,
+    "bmi": 23.592019199170068,
+    "bodyFatPercentage": 17.762982754008515,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 89,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.461Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.461Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6261"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-04-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 79.40433329598818,
+    "bmi": 22.360821425676175,
+    "bodyFatPercentage": 24.76117026018582,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 66,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.464Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.464Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6264"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-05-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 77.40942618299157,
+    "bmi": 23.801394927418986,
+    "bodyFatPercentage": 20.7988246548717,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 72,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.465Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.465Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6267"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-06-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 72.36011590296765,
+    "bmi": 24.2530834267458,
+    "bodyFatPercentage": 23.706978721573563,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 63,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.467Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686aaa52c78de6221f6b6269"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "period": "monthly",
+  "date": {
+    "$date": "2025-07-06T16:54:42.431Z"
+  },
+  "healthMetrics": {
+    "weight": 74.43600894276305,
+    "bmi": 22.012273740038413,
+    "bodyFatPercentage": 20.30010815326435,
+    "muscleMass": 0,
+    "metabolicAge": 0,
+    "visceralFatLevel": 0
+  },
+  "overallScore": 80,
+  "activityMetrics": {
+    "averageCaloriesConsumed": 0,
+    "averageCaloriesBurned": 0,
+    "exerciseDays": 0,
+    "averageSteps": 0,
+    "averageSleepHours": 0,
+    "waterIntakeGoalDays": 0
+  },
+  "nutritionTrends": {
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugar": 0,
+    "sodium": 0
+  },
+  "goalAchievements": {
+    "calorieGoal": 0,
+    "proteinGoal": 0,
+    "exerciseGoal": 0,
+    "waterGoal": 0,
+    "sleepGoal": 0,
+    "weightGoal": 0
+  },
+  "createdAt": {
+    "$date": "2025-07-06T16:54:42.469Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T16:54:42.469Z"
+  },
+  "__v": 0
+}]

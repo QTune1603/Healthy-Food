@@ -134,6 +134,7 @@ HealthyFood/
 ## Update
 - Chỉnh sửa trang calo calculation  cho phù hợp với thực tế.
 - Update database để đa dạng hóa cho user.
+- Cần tối ưu hiệu suất của code để có thể đưa vào thực tế.(db, frontend).
 - Trong tương lai có thể làm trang admin.
 
 ---

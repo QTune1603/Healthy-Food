@@ -4,7 +4,7 @@
   },
   "fullName": "Admin HealthyFood",
   "email": "admin@healthyfood.com",
-  "password": "$2b$10$gJlWKcoAClcBGqgq2u7LY.Qiuv43iUd5YKBd6dRZZrf2aQJpRfe2S",
+  "password": "$2a$12$HXUf4TN6kMre2szZ8YD5P.8GbaLMvr1q9H4gV8tFDZLQLqatHRJ0q",
   "avatar": "https://i.pravatar.cc/300",
   "role": "admin",
   "isActive": true,
@@ -22,7 +22,7 @@
   },
   "fullName": "hungvo1",
   "email": "hungvo@gmail.com",
-  "password": "$2a$10$ZflJVLMmKsA3PWadlnxDJOiqlttXR5MPl4T6XxhrOi/Ahy53hHkYO",
+  "password": "$2a$12$HXUf4TN6kMre2szZ8YD5P.8GbaLMvr1q9H4gV8tFDZLQLqatHRJ0q",
   "phone": "0338782782",
   "gender": "male",
   "dateOfBirth": {

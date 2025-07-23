@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const MealSuggestion = require('../models/MealSuggestion');
+const dotenv = require('dotenv');
+// Load env vars
+dotenv.config();
 
 const mealSuggestionsData = [
   // Breakfast
@@ -363,9 +366,19 @@ const seedMealSuggestions = async () => {
   }
 };
 
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('MongoDB Connected...');
+  } catch (error) {
+    console.error('Database connection error:', error);
+    process.exit(1);
+  }
+};
+
 // Chạy seeder nếu file được gọi trực tiếp
 if (require.main === module) {
-  const connectDB = require('../config/database');
+  // const connectDB = require('../config/database');
   
   const runSeeder = async () => {
     try {

@@ -5,7 +5,7 @@ const calorieService = {
   calculateCalories: async (data) => {
     try {
       const response = await axiosClient.post('/calorie/calculate', data);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi tính toán calo');
     }
@@ -21,7 +21,7 @@ const calorieService = {
       });
 
       const response = await axiosClient.get(`/calorie/history?${queryParams}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy lịch sử tính toán');
     }
@@ -41,7 +41,7 @@ const calorieService = {
   getCalculationById: async (id) => {
     try {
       const response = await axiosClient.get(`/calorie/${id}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy thông tin tính toán');
     }
@@ -51,7 +51,7 @@ const calorieService = {
   deleteCalculation: async (id) => {
     try {
       const response = await axiosClient.delete(`/calorie/${id}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi xóa tính toán');
     }
@@ -61,11 +61,11 @@ const calorieService = {
   getBMIStats: async (period = 30) => {
     try {
       const response = await axiosClient.get(`/calorie/stats/bmi?period=${period}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy thống kê BMI');
     }
   }
 };
 
-export default calorieService; 
+export default calorieService;

@@ -42,6 +42,8 @@ const foodEntrySchema = new mongoose.Schema({
     required: true,
     enum: ['breakfast', 'lunch', 'dinner', 'snack']
   }
+}, {
+  timestamps: true
 });
 
 const foodDiarySchema = new mongoose.Schema({

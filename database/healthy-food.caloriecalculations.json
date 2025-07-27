@@ -1,713 +1,589 @@
 [{
   "_id": {
-    "$oid": "686aa6b4e54357520563f25c"
+    "$oid": "6885c26ea055ac0786a41d2f"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 150,
-  "weight": 50,
-  "age": 26,
+  "height": 165,
+  "weight": 32,
+  "age": 24,
   "gender": "male",
   "activityLevel": "moderate",
   "goal": "maintain",
-  "bmr": 1313,
-  "maintenanceCalories": 2034,
-  "targetCalories": 2034,
+  "bmr": 1236,
+  "maintenanceCalories": 1916,
+  "targetCalories": 1916,
   "goalDescription": "Duy trì cân nặng",
-  "protein": 127,
-  "carbs": 229,
-  "fats": 68,
+  "protein": 120,
+  "carbs": 216,
+  "fats": 64,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:39:16.853Z"
+    "$date": "2025-07-27T06:08:46.155Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:39:16.853Z"
+    "$date": "2025-07-27T06:08:46.155Z"
   },
-  "bmi": 22.2,
-  "bmiCategory": "normal",
+  "bmi": 11.8,
+  "bmiCategory": "underweight",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aa6b7e54357520563f25f"
+    "$oid": "6885c272a055ac0786a41d32"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 150,
-  "weight": 50,
-  "age": 26,
+  "height": 165,
+  "weight": 32,
+  "age": 24,
   "gender": "male",
   "activityLevel": "moderate",
-  "goal": "maintain",
-  "bmr": 1313,
-  "maintenanceCalories": 2034,
-  "targetCalories": 2034,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 127,
-  "carbs": 229,
-  "fats": 68,
+  "goal": "lose",
+  "bmr": 1236,
+  "maintenanceCalories": 1916,
+  "targetCalories": 1416,
+  "goalDescription": "Giảm cân (0.5kg/tuần)",
+  "protein": 89,
+  "carbs": 159,
+  "fats": 47,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:39:19.929Z"
+    "$date": "2025-07-27T06:08:50.228Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:39:19.929Z"
+    "$date": "2025-07-27T06:08:50.228Z"
   },
-  "bmi": 22.2,
-  "bmiCategory": "normal",
+  "bmi": 11.8,
+  "bmiCategory": "underweight",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aa6bbe54357520563f262"
+    "$oid": "6885c275a055ac0786a41d35"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 150,
-  "weight": 50,
-  "age": 26,
+  "height": 165,
+  "weight": 32,
+  "age": 24,
   "gender": "male",
   "activityLevel": "moderate",
-  "goal": "maintain",
-  "bmr": 1313,
-  "maintenanceCalories": 2034,
-  "targetCalories": 2034,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 127,
-  "carbs": 229,
-  "fats": 68,
+  "goal": "lose",
+  "bmr": 1236,
+  "maintenanceCalories": 1916,
+  "targetCalories": 1416,
+  "goalDescription": "Giảm cân (0.5kg/tuần)",
+  "protein": 89,
+  "carbs": 159,
+  "fats": 47,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:39:23.026Z"
+    "$date": "2025-07-27T06:08:53.287Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:39:23.026Z"
+    "$date": "2025-07-27T06:08:53.287Z"
   },
-  "bmi": 22.2,
-  "bmiCategory": "normal",
+  "bmi": 11.8,
+  "bmiCategory": "underweight",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aa775e54357520563f26f"
+    "$oid": "6885c2f9a055ac0786a41d56"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "moderate",
-  "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 2499,
-  "targetCalories": 2499,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 156,
-  "carbs": 281,
-  "fats": 83,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:42:29.533Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:42:29.533Z"
-  },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa19c78de6221f6b6205"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
-  "gender": "female",
-  "activityLevel": "moderate",
-  "goal": "maintain",
-  "bmr": 1447,
-  "maintenanceCalories": 2242,
-  "targetCalories": 2242,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 140,
-  "carbs": 252,
-  "fats": 75,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:53:45.391Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:53:45.391Z"
-  },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa1ac78de6221f6b6208"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
-  "gender": "female",
-  "activityLevel": "moderate",
-  "goal": "maintain",
-  "bmr": 1447,
-  "maintenanceCalories": 2242,
-  "targetCalories": 2242,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 140,
-  "carbs": 252,
-  "fats": 75,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:53:46.788Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:53:46.788Z"
-  },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa1cc78de6221f6b620b"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 65,
+  "height": 142,
+  "weight": 41,
   "age": 21,
   "gender": "male",
   "activityLevel": "moderate",
   "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 2499,
-  "targetCalories": 2499,
+  "bmr": 1198,
+  "maintenanceCalories": 1856,
+  "targetCalories": 1856,
   "goalDescription": "Duy trì cân nặng",
-  "protein": 156,
-  "carbs": 281,
-  "fats": 83,
+  "protein": 116,
+  "carbs": 209,
+  "fats": 62,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:53:48.351Z"
+    "$date": "2025-07-27T06:11:05.695Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:53:48.351Z"
+    "$date": "2025-07-27T06:11:05.695Z"
   },
-  "bmi": 22.5,
+  "bmi": 20.3,
   "bmiCategory": "normal",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aaa1ec78de6221f6b620e"
+    "$oid": "6885c2fba055ac0786a41d59"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 65,
+  "height": 142,
+  "weight": 41,
   "age": 21,
   "gender": "male",
-  "activityLevel": "active",
+  "activityLevel": "moderate",
   "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 2782,
-  "targetCalories": 2782,
+  "bmr": 1198,
+  "maintenanceCalories": 1856,
+  "targetCalories": 1856,
   "goalDescription": "Duy trì cân nặng",
-  "protein": 174,
-  "carbs": 313,
-  "fats": 93,
+  "protein": 116,
+  "carbs": 209,
+  "fats": 62,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:53:50.007Z"
+    "$date": "2025-07-27T06:11:07.297Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:53:50.007Z"
+    "$date": "2025-07-27T06:11:07.297Z"
   },
-  "bmi": 22.5,
+  "bmi": 20.3,
   "bmiCategory": "normal",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aaa20c78de6221f6b6211"
+    "$oid": "6885c303a055ac0786a41d66"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
+  "height": 124,
+  "weight": 24,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "veryActive",
-  "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 3064,
-  "targetCalories": 3064,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 191,
-  "carbs": 345,
-  "fats": 102,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 900,
+  "maintenanceCalories": 1238,
+  "targetCalories": 1738,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 109,
+  "carbs": 195,
+  "fats": 58,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:53:52.028Z"
+    "$date": "2025-07-27T06:11:15.540Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:53:52.028Z"
+    "$date": "2025-07-27T06:11:15.540Z"
   },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
+  "bmi": 15.6,
+  "bmiCategory": "underweight",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aaa23c78de6221f6b6214"
+    "$oid": "6885c308a055ac0786a41d69"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
+  "height": 124,
+  "weight": 24,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "veryActive",
-  "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 3064,
-  "targetCalories": 3064,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 191,
-  "carbs": 345,
-  "fats": 102,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 900,
+  "maintenanceCalories": 1238,
+  "targetCalories": 1738,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 109,
+  "carbs": 195,
+  "fats": 58,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:53:55.213Z"
+    "$date": "2025-07-27T06:11:20.057Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:53:55.213Z"
+    "$date": "2025-07-27T06:11:20.057Z"
   },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
+  "bmi": 15.6,
+  "bmiCategory": "underweight",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aaa2bc78de6221f6b6217"
+    "$oid": "6885c35ba055ac0786a41da9"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
+  "height": 127,
+  "weight": 24,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 2782,
-  "targetCalories": 2782,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 174,
-  "carbs": 313,
-  "fats": 93,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 919,
+  "maintenanceCalories": 1263,
+  "targetCalories": 1763,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 110,
+  "carbs": 198,
+  "fats": 59,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:54:03.033Z"
+    "$date": "2025-07-27T06:12:43.639Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:54:03.033Z"
+    "$date": "2025-07-27T06:12:43.639Z"
   },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
+  "bmi": 14.9,
+  "bmiCategory": "underweight",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aaa32c78de6221f6b621a"
+    "$oid": "6885c35fa055ac0786a41dad"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
+  "height": 127,
+  "weight": 233,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "sedentary",
-  "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 1935,
-  "targetCalories": 1935,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 121,
-  "carbs": 218,
-  "fats": 65,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 3009,
+  "maintenanceCalories": 4137,
+  "targetCalories": 4637,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 290,
+  "carbs": 522,
+  "fats": 155,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T16:54:10.492Z"
+    "$date": "2025-07-27T06:12:47.706Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:54:10.492Z"
+    "$date": "2025-07-27T06:12:47.706Z"
   },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa33c78de6221f6b621d"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 65,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "sedentary",
-  "goal": "maintain",
-  "bmr": 1613,
-  "maintenanceCalories": 1935,
-  "targetCalories": 1935,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 121,
-  "carbs": 218,
-  "fats": 65,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:54:11.264Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:54:11.264Z"
-  },
-  "bmi": 22.5,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa3bc78de6221f6b6221"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 61,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "sedentary",
-  "goal": "maintain",
-  "bmr": 1573,
-  "maintenanceCalories": 1887,
-  "targetCalories": 1887,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 118,
-  "carbs": 212,
-  "fats": 63,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:54:19.590Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:54:19.590Z"
-  },
-  "bmi": 21.1,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa3cc78de6221f6b6224"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 61,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "sedentary",
-  "goal": "maintain",
-  "bmr": 1573,
-  "maintenanceCalories": 1887,
-  "targetCalories": 1887,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 118,
-  "carbs": 212,
-  "fats": 63,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:54:20.468Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:54:20.468Z"
-  },
-  "bmi": 21.1,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa41c78de6221f6b6227"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 170,
-  "weight": 67,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "sedentary",
-  "goal": "maintain",
-  "bmr": 1633,
-  "maintenanceCalories": 1959,
-  "targetCalories": 1959,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 122,
-  "carbs": 220,
-  "fats": 65,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:54:25.018Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:54:25.018Z"
-  },
-  "bmi": 23.2,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaa4cc78de6221f6b622a"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 171,
-  "weight": 61,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1579,
-  "maintenanceCalories": 2723,
-  "targetCalories": 2723,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 170,
-  "carbs": 306,
-  "fats": 91,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T16:54:36.435Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T16:54:36.435Z"
-  },
-  "bmi": 20.9,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686aaffcc78de6221f6b62f5"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 171,
-  "weight": 61,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1579,
-  "maintenanceCalories": 2723,
-  "targetCalories": 2723,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 170,
-  "carbs": 306,
-  "fats": 91,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T17:18:52.454Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T17:18:52.454Z"
-  },
-  "bmi": 20.9,
-  "bmiCategory": "normal",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "686ab00ac78de6221f6b62f8"
-  },
-  "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
-  },
-  "height": 171,
-  "weight": 89,
-  "age": 21,
-  "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1859,
-  "maintenanceCalories": 3206,
-  "targetCalories": 3206,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 200,
-  "carbs": 361,
-  "fats": 107,
-  "isActive": true,
-  "createdAt": {
-    "$date": "2025-07-06T17:19:06.594Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T17:19:06.594Z"
-  },
-  "bmi": 30.4,
+  "bmi": 144.5,
   "bmiCategory": "obese",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686ab06dc78de6221f6b636f"
+    "$oid": "6885c368a055ac0786a41dbb"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 159,
-  "weight": 89,
-  "age": 21,
+  "height": 234,
+  "weight": 233,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1784,
-  "maintenanceCalories": 3077,
-  "targetCalories": 3077,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 192,
-  "carbs": 346,
-  "fats": 103,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 3678,
+  "maintenanceCalories": 5057,
+  "targetCalories": 5557,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 347,
+  "carbs": 625,
+  "fats": 185,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T17:20:45.209Z"
+    "$date": "2025-07-27T06:12:56.151Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T17:20:45.209Z"
+    "$date": "2025-07-27T06:12:56.151Z"
   },
-  "bmi": 35.2,
+  "bmi": 42.6,
   "bmiCategory": "obese",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686ab0a1c78de6221f6b6381"
+    "$oid": "6885c37ca055ac0786a41dbf"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
-  "height": 170,
-  "weight": 89,
-  "age": 21,
+  "height": 180,
+  "weight": 233,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1853,
-  "maintenanceCalories": 3196,
-  "targetCalories": 3196,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 200,
-  "carbs": 360,
-  "fats": 107,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 3340,
+  "maintenanceCalories": 4593,
+  "targetCalories": 5093,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 318,
+  "carbs": 573,
+  "fats": 170,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T17:21:37.169Z"
+    "$date": "2025-07-27T06:13:16.988Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T17:21:37.169Z"
+    "$date": "2025-07-27T06:13:16.988Z"
   },
-  "bmi": 30.8,
+  "bmi": 71.9,
   "bmiCategory": "obese",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686ab0aec78de6221f6b638e"
+    "$oid": "6885c3b4a055ac0786a41dc9"
   },
   "user": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885c254a055ac0786a41d1a"
   },
   "height": 185,
-  "weight": 89,
-  "age": 21,
+  "weight": 233,
+  "age": 24,
   "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1946,
-  "maintenanceCalories": 3357,
-  "targetCalories": 3357,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 210,
-  "carbs": 378,
-  "fats": 112,
+  "activityLevel": "light",
+  "goal": "gain",
+  "bmr": 3371,
+  "maintenanceCalories": 4635,
+  "targetCalories": 5135,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 321,
+  "carbs": 578,
+  "fats": 171,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T17:21:50.094Z"
+    "$date": "2025-07-27T06:14:12.180Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T17:21:50.094Z"
+    "$date": "2025-07-27T06:14:12.180Z"
   },
-  "bmi": 26,
-  "bmiCategory": "overweight",
+  "bmi": 68.1,
+  "bmiCategory": "obese",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686ab0b8c78de6221f6b6391"
+    "$oid": "6885c3b7a055ac0786a41dcd"
+  },
+  "user": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "height": 185,
+  "weight": 233,
+  "age": 24,
+  "gender": "male",
+  "activityLevel": "active",
+  "goal": "gain",
+  "bmr": 3371,
+  "maintenanceCalories": 5815,
+  "targetCalories": 6315,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 395,
+  "carbs": 710,
+  "fats": 211,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T06:14:15.324Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T06:14:15.324Z"
+  },
+  "bmi": 68.1,
+  "bmiCategory": "obese",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885c3bca055ac0786a41dd1"
+  },
+  "user": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "height": 185,
+  "weight": 24,
+  "age": 24,
+  "gender": "male",
+  "activityLevel": "active",
+  "goal": "gain",
+  "bmr": 1281,
+  "maintenanceCalories": 2210,
+  "targetCalories": 2710,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 169,
+  "carbs": 305,
+  "fats": 90,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T06:14:20.783Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T06:14:20.783Z"
+  },
+  "bmi": 7,
+  "bmiCategory": "underweight",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885c3c1a055ac0786a41dd5"
+  },
+  "user": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "height": 185,
+  "weight": 58,
+  "age": 24,
+  "gender": "male",
+  "activityLevel": "active",
+  "goal": "gain",
+  "bmr": 1621,
+  "maintenanceCalories": 2797,
+  "targetCalories": 3297,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 206,
+  "carbs": 371,
+  "fats": 110,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T06:14:25.106Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T06:14:25.106Z"
+  },
+  "bmi": 16.9,
+  "bmiCategory": "underweight",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885c4c2a055ac0786a41e2b"
+  },
+  "user": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "height": 285,
+  "weight": 58,
+  "age": 24,
+  "gender": "male",
+  "activityLevel": "active",
+  "goal": "gain",
+  "bmr": 2246,
+  "maintenanceCalories": 3875,
+  "targetCalories": 4375,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 273,
+  "carbs": 492,
+  "fats": 146,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T06:18:42.522Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T06:18:42.522Z"
+  },
+  "bmi": 7.1,
+  "bmiCategory": "underweight",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885c4d5a055ac0786a41e2f"
+  },
+  "user": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "height": 50,
+  "weight": 58,
+  "age": 24,
+  "gender": "male",
+  "activityLevel": "active",
+  "goal": "gain",
+  "bmr": 778,
+  "maintenanceCalories": 1341,
+  "targetCalories": 1841,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 115,
+  "carbs": 207,
+  "fats": 61,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T06:19:01.644Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T06:19:01.644Z"
+  },
+  "bmi": 232,
+  "bmiCategory": "obese",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885dea9a055ac0786a41e36"
+  },
+  "user": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "height": 185,
+  "weight": 58,
+  "age": 24,
+  "gender": "male",
+  "activityLevel": "active",
+  "goal": "gain",
+  "bmr": 1621,
+  "maintenanceCalories": 2797,
+  "targetCalories": 3297,
+  "goalDescription": "Tăng cân (0.5kg/tuần)",
+  "protein": 206,
+  "carbs": 371,
+  "fats": 110,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T08:09:13.827Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:09:13.827Z"
+  },
+  "bmi": 16.9,
+  "bmiCategory": "underweight",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cbb"
   },
   "user": {
     "$oid": "686a32b42bf267cc23846bb6"
   },
-  "height": 185,
-  "weight": 89,
-  "age": 21,
+  "height": 170,
+  "weight": 70,
+  "age": 1,
   "gender": "male",
-  "activityLevel": "active",
-  "goal": "maintain",
-  "bmr": 1946,
-  "maintenanceCalories": 3357,
-  "targetCalories": 3357,
-  "goalDescription": "Duy trì cân nặng",
-  "protein": 210,
-  "carbs": 378,
-  "fats": 112,
+  "activityLevel": "moderate",
+  "goal": "lose",
+  "bmr": 1763,
+  "maintenanceCalories": 2733,
+  "targetCalories": 2233,
+  "goalDescription": "Giảm cân (0.5kg/tuần)",
+  "protein": 140,
+  "carbs": 251,
+  "fats": 74,
   "isActive": true,
   "createdAt": {
-    "$date": "2025-07-06T17:22:00.957Z"
+    "$date": "2025-07-27T08:38:18.745Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T17:22:00.957Z"
+    "$date": "2025-07-27T08:38:18.745Z"
   },
-  "bmi": 26,
-  "bmiCategory": "overweight",
+  "bmi": 24.2,
+  "bmiCategory": "normal",
   "__v": 0
 }]

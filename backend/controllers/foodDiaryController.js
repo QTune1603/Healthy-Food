@@ -171,22 +171,23 @@ const getDiaryByRange = async (req, res) => {
 // Cập nhật entry trong nhật ký
 const updateFoodEntry = async (req, res) => {
   try {
-    const { diaryId, entryId } = req.params;
+    const { id } = req.params; // entryId từ route
     const { quantity, mealType } = req.body;
 
+    // Tìm diary chứa entry với entryId và userId
     const diary = await FoodDiary.findOne({
-      _id: diaryId,
-      user: req.user.id
+      user: req.user.id,
+      'entries._id': id
     });
 
     if (!diary) {
       return res.status(404).json({
         success: false,
-        message: 'Không tìm thấy nhật ký'
+        message: 'Không tìm thấy entry'
       });
     }
 
-    const entry = diary.entries.id(entryId);
+    const entry = diary.entries.id(id);
     if (!entry) {
       return res.status(404).json({
         success: false,
@@ -236,21 +237,22 @@ const updateFoodEntry = async (req, res) => {
 // Xóa entry khỏi nhật ký
 const deleteFoodEntry = async (req, res) => {
   try {
-    const { diaryId, entryId } = req.params;
+    const { id } = req.params; // entryId từ route
 
+    // Tìm diary chứa entry với entryId và userId
     const diary = await FoodDiary.findOne({
-      _id: diaryId,
-      user: req.user.id
+      user: req.user.id,
+      'entries._id': id
     });
 
     if (!diary) {
       return res.status(404).json({
         success: false,
-        message: 'Không tìm thấy nhật ký'
+        message: 'Không tìm thấy entry'
       });
     }
 
-    diary.entries.id(entryId).remove();
+    diary.entries.pull(id);
     await diary.save();
 
     res.json({

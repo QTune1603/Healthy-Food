@@ -1,3 +1,4 @@
+const moongoose = require('mongoose');
 const Dashboard = require('../models/Dashboard');
 const HealthTrend = require('../models/HealthTrend');
 const FoodDiary = require('../models/FoodDiary');
@@ -164,7 +165,7 @@ const getNutritionStats = async (req, res) => {
     const nutritionData = await FoodDiary.aggregate([
       {
         $match: {
-          userId: userId,
+          user: new moongoose.Types.ObjectId(userId),
           date: {
             $gte: startDate,
             $lte: endDate
@@ -425,10 +426,89 @@ const calculateActivityScore = (activityLevel) => {
   return scores[activityLevel] || 60;
 };
 
+// @desc    Lấy dữ liệu calendar (ngày nào có data)
+// @route   GET /api/dashboard/calendar
+// @access  Private
+const getCalendarData = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { startDate, endDate } = req.query;
+
+    const query = { userId };
+    if (startDate && endDate) {
+      query.date = {
+        $gte: new Date(startDate),
+        $lte: new Date(endDate)
+      };
+    }
+
+    const dashboards = await Dashboard.find(query, 'date').sort({ date: 1 });
+    const daysWithData = dashboards.map(d => d.date);
+
+    res.json({
+      success: true,
+      data: {
+        daysWithData,
+        count: daysWithData.length
+      }
+    });
+  } catch (error) {
+    console.error('Get calendar data error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Lỗi khi lấy dữ liệu calendar'
+    });
+  }
+};
+
+// @desc    Lấy dữ liệu cho ngày cụ thể
+// @route   GET /api/dashboard/date/:date
+// @access  Private
+const getDateData = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { date } = req.params;
+
+    const targetDate = new Date(date);
+    targetDate.setHours(0, 0, 0, 0);
+    const nextDay = new Date(targetDate);
+    nextDay.setDate(nextDay.getDate() + 1);
+
+    const dashboard = await Dashboard.findOne({
+      userId,
+      date: {
+        $gte: targetDate,
+        $lt: nextDay
+      }
+    });
+
+    if (!dashboard) {
+      return res.json({
+        success: true,
+        data: null,
+        message: 'Không có dữ liệu cho ngày này'
+      });
+    }
+
+    res.json({
+      success: true,
+      data: dashboard
+    });
+  } catch (error) {
+    console.error('Get date data error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Lỗi khi lấy dữ liệu ngày'
+    });
+  }
+};
+
 module.exports = {
   getDashboardOverview,
   getBodyMetricsRadarData,
   getHealthTrends,
   getNutritionStats,
-  updateDashboard
+  updateDashboard, 
+  getCalendarData,
+  getDateData
 }; 

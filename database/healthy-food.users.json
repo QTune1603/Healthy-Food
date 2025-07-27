@@ -4,7 +4,7 @@
   },
   "fullName": "Admin HealthyFood",
   "email": "admin@healthyfood.com",
-  "password": "$2a$12$HXUf4TN6kMre2szZ8YD5P.8GbaLMvr1q9H4gV8tFDZLQLqatHRJ0q",
+  "password": "$2b$10$gJlWKcoAClcBGqgq2u7LY.Qiuv43iUd5YKBd6dRZZrf2aQJpRfe2S",
   "avatar": "https://i.pravatar.cc/300",
   "role": "admin",
   "isActive": true,
@@ -22,7 +22,7 @@
   },
   "fullName": "hungvo1",
   "email": "hungvo@gmail.com",
-  "password": "$2a$12$HXUf4TN6kMre2szZ8YD5P.8GbaLMvr1q9H4gV8tFDZLQLqatHRJ0q",
+  "password": "$2a$10$LNY0isI5w0vPYZMS3xhOV.mGk/LDVAeQaXfB7myGGRaM7s8y9.gPW",
   "phone": "0338782782",
   "gender": "male",
   "dateOfBirth": {
@@ -37,6 +37,54 @@
   },
   "updatedAt": {
     "$date": "2025-07-06T16:46:31.616Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "fullName": "hungvo1",
+  "email": "hungvo1@gmail.com",
+  "password": "$2a$10$LNY0isI5w0vPYZMS3xhOV.mGk/LDVAeQaXfB7myGGRaM7s8y9.gPW",
+  "phone": "0337163991",
+  "gender": "male",
+  "dateOfBirth": {
+    "$date": "2025-07-27T00:00:00.000Z"
+  },
+  "address": "test",
+  "avatar": "https://i.pravatar.cc/300",
+  "role": "user",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T06:08:20.628Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T06:08:20.628Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "fullName": "Nguyễn Văn An",
+  "email": "test@example.com",
+  "password": "$2a$10$0Cx5rSjmsK97xHNIP1beVOtpPLGrPS1j3sn2gmSGFoyoSCTxJc97a",
+  "phone": "0123456789",
+  "gender": "male",
+  "dateOfBirth": {
+    "$date": "1990-05-15T00:00:00.000Z"
+  },
+  "address": "Hà Nội, Việt Nam",
+  "avatar": "https://i.pravatar.cc/300",
+  "role": "user",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T08:17:36.732Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:17:36.732Z"
   },
   "__v": 0
 }]

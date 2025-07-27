@@ -9,7 +9,8 @@
     "seed:foods": "node seeds/foodSeeder.js",
     "seed:body": "node seeds/bodyMetricsSeeder.js",
     "seed:meals": "node seeds/mealSuggestionSeeder.js",
-    "seed:all": "npm run seed:foods && npm run seed:body && npm run seed:meals"
+    "seed:dashboard": "node seeds/dashboardSeeder.js",
+    "seed:all": "npm run seed:foods && npm run seed:body && npm run seed:meals && npm run seed:dashboard"
   },
   "dependencies": {
     "express": "^4.18.2",

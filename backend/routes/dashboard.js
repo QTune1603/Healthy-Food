@@ -6,7 +6,9 @@ const {
   getBodyMetricsRadarData,
   getHealthTrends,
   getNutritionStats,
-  updateDashboard
+  updateDashboard,
+  getCalendarData,
+  getDateData
 } = require('../controllers/dashboardController');
 
 // @route   GET /api/dashboard/overview
@@ -33,5 +35,15 @@ router.get('/nutrition-stats', protect, getNutritionStats);
 // @desc    Cập nhật dashboard data hôm nay
 // @access  Private
 router.post('/update', protect, updateDashboard);
+
+// @route   GET /api/dashboard/calendar
+// @desc    Lấy dữ liệu calendar (ngày nào có data)
+// @access  Private
+router.get('/calendar', protect, getCalendarData);
+
+// @route   GET /api/dashboard/date/:date
+// @desc    Lấy dữ liệu cho ngày cụ thể
+// @access  Private
+router.get('/date/:date', protect, getDateData);
 
 module.exports = router; 

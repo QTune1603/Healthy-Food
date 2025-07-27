@@ -4,8 +4,8 @@ const foodDiaryService = {
   // Thêm thực phẩm vào nhật ký
   addFoodEntry: async (entryData) => {
     try {
-      const response = await axiosClient.post('/food-diary/entries', entryData);
-      return response.data;
+      const response = await axiosClient.post('/food-diary/entry', entryData);
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi thêm thực phẩm vào nhật ký');
     }
@@ -15,7 +15,7 @@ const foodDiaryService = {
   getDiaryByDate: async (date) => {
     try {
       const response = await axiosClient.get(`/food-diary/date/${date}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy nhật ký theo ngày');
     }
@@ -33,28 +33,28 @@ const foodDiaryService = {
       if (startDate) queryParams.append('startDate', startDate);
       if (endDate) queryParams.append('endDate', endDate);
 
-      const response = await axiosClient.get(`/food-diary?${queryParams}`);
-      return response.data;
+      const response = await axiosClient.get(`/food-diary/range?${queryParams}`);
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy nhật ký theo khoảng thời gian');
     }
   },
 
   // Cập nhật entry trong nhật ký
-  updateFoodEntry: async (diaryId, entryId, updateData) => {
+  updateFoodEntry: async (entryId, updateData) => {
     try {
-      const response = await axiosClient.put(`/food-diary/${diaryId}/entries/${entryId}`, updateData);
-      return response.data;
+      const response = await axiosClient.put(`/food-diary/entry/${entryId}`, updateData);
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi cập nhật entry');
     }
   },
 
   // Xóa entry khỏi nhật ký
-  deleteFoodEntry: async (diaryId, entryId) => {
+  deleteFoodEntry: async (entryId) => {
     try {
-      const response = await axiosClient.delete(`/food-diary/${diaryId}/entries/${entryId}`);
-      return response.data;
+      const response = await axiosClient.delete(`/food-diary/entry/${entryId}`);
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi xóa entry');
     }
@@ -64,7 +64,7 @@ const foodDiaryService = {
   getNutritionStats: async (period = 7) => {
     try {
       const response = await axiosClient.get(`/food-diary/stats?period=${period}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy thống kê dinh dưỡng');
     }
@@ -74,7 +74,7 @@ const foodDiaryService = {
   getPopularFoods: async (limit = 10) => {
     try {
       const response = await axiosClient.get(`/food-diary/popular?limit=${limit}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy thực phẩm phổ biến');
     }

@@ -30,7 +30,7 @@ const mealSuggestionService = {
       if (featured) queryParams.append('featured', featured);
 
       const response = await axiosClient.get(`/meal-suggestions?${queryParams}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy gợi ý món ăn');
     }
@@ -40,7 +40,7 @@ const mealSuggestionService = {
   getMealSuggestionById: async (id) => {
     try {
       const response = await axiosClient.get(`/meal-suggestions/${id}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy thông tin món ăn');
     }
@@ -56,7 +56,7 @@ const mealSuggestionService = {
       });
 
       const response = await axiosClient.get(`/meal-suggestions/by-calories?${queryParams}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy gợi ý món ăn theo calo');
     }
@@ -66,7 +66,7 @@ const mealSuggestionService = {
   searchMealSuggestions: async (query, limit = 10) => {
     try {
       const response = await axiosClient.get(`/meal-suggestions/search?q=${encodeURIComponent(query)}&limit=${limit}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi tìm kiếm món ăn');
     }
@@ -76,7 +76,7 @@ const mealSuggestionService = {
   getPopularMealSuggestions: async (limit = 6) => {
     try {
       const response = await axiosClient.get(`/meal-suggestions/popular?limit=${limit}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy món ăn phổ biến');
     }
@@ -86,7 +86,7 @@ const mealSuggestionService = {
   createMealSuggestion: async (data) => {
     try {
       const response = await axiosClient.post('/meal-suggestions', data);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi tạo gợi ý món ăn');
     }
@@ -96,7 +96,7 @@ const mealSuggestionService = {
   updateMealSuggestion: async (id, data) => {
     try {
       const response = await axiosClient.put(`/meal-suggestions/${id}`, data);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi cập nhật gợi ý món ăn');
     }
@@ -106,7 +106,7 @@ const mealSuggestionService = {
   deleteMealSuggestion: async (id) => {
     try {
       const response = await axiosClient.delete(`/meal-suggestions/${id}`);
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi xóa gợi ý món ăn');
     }
@@ -116,7 +116,7 @@ const mealSuggestionService = {
   toggleLikeMealSuggestion: async (id, action) => {
     try {
       const response = await axiosClient.post(`/meal-suggestions/${id}/like`, { action });
-      return response.data;
+      return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi thích/bỏ thích món ăn');
     }

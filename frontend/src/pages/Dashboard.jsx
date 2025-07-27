@@ -11,6 +11,8 @@ const Dashboard = () => {
   const [radarData, setRadarData] = useState(null);
   const [healthTrends, setHealthTrends] = useState([]);
   const [nutritionStats, setNutritionStats] = useState([]);
+  const [selectedDateData, setSelectedDateData] = useState(null);
+  const [daysWithData, setDaysWithData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -19,31 +21,30 @@ const Dashboard = () => {
     loadDashboardData();
   }, []);
 
+  // Load data for selected date
+  useEffect(() => {
+    loadSelectedDateData();
+  }, [selectedDate]);
+
   const loadDashboardData = async () => {
     try {
       setLoading(true);
       setError(null);
       
-      // Load APIs one by one để debug dễ hơn
-      console.log('Loading dashboard overview...');
       const overview = await dashboardService.getOverview();
-      console.log('Overview response:', overview);
-      setDashboardData(overview?.data || null);
+      setDashboardData(overview?.data || overview || null);
 
-      console.log('Loading body metrics...');
       const bodyMetrics = await dashboardService.getBodyMetricsRadarData();
-      console.log('Body metrics response:', bodyMetrics);
       setRadarData(bodyMetrics?.data?.radarData || null);
 
-      console.log('Loading health trends...');
       const trends = await dashboardService.getHealthTrends({ period: 'monthly', limit: 12 });
-      console.log('Trends response:', trends);
       setHealthTrends(trends?.data?.chartData || []);
 
-      console.log('Loading nutrition stats...');
       const nutrition = await dashboardService.getNutritionStats(7);
-      console.log('Nutrition response:', nutrition);
       setNutritionStats(nutrition?.data?.chartData || []);
+
+      // Load calendar data with days that have dashboard records
+      await loadCalendarData();
 
     } catch (error) {
       console.error('Load dashboard data error:', error);
@@ -52,6 +53,37 @@ const Dashboard = () => {
       setFallbackData();
     } finally {
       setLoading(false);
+    }
+  };
+
+  const loadCalendarData = async () => {
+    try {
+      // Load all dashboard dates for current month/year to show indicators
+      const startOfMonth = new Date(selectedYear, selectedMonth, 1);
+      const endOfMonth = new Date(selectedYear, selectedMonth + 1, 0);
+      
+      const calendarData = await dashboardService.getCalendarData({
+        startDate: startOfMonth.toISOString(),
+        endDate: endOfMonth.toISOString()
+      });
+      
+      if (calendarData?.data?.daysWithData) {
+        setDaysWithData(calendarData.data.daysWithData);
+      }
+    } catch (error) {
+      console.error('Load calendar data error:', error);
+      setDaysWithData([]);
+    }
+  };
+
+  const loadSelectedDateData = async () => {
+    try {
+      const dateStr = selectedDate.toISOString().split('T')[0];
+      const dateData = await dashboardService.getDateData(dateStr);
+      setSelectedDateData(dateData?.data || null);
+    } catch (error) {
+      console.error('Load selected date data error:', error);
+      setSelectedDateData(null);
     }
   };
 
@@ -144,6 +176,22 @@ const Dashboard = () => {
     }
   };
 
+  // Re-load calendar data when month/year changes
+  useEffect(() => {
+    if (!loading) {
+      loadCalendarData();
+    }
+  }, [selectedMonth, selectedYear]);
+
+  const hasDataForDay = (day) => {
+    return daysWithData.some(date => {
+      const dataDate = new Date(date);
+      return dataDate.getDate() === day && 
+             dataDate.getMonth() === selectedMonth && 
+             dataDate.getFullYear() === selectedYear;
+    });
+  };
+
   // Tính radar chart points từ data
   const getRadarPoints = () => {
     if (!radarData) return "0,-120 104,-60 78,90 0,90 -78,45 -104,-60";
@@ -160,7 +208,7 @@ const Dashboard = () => {
       { x: -(activity * scale * 0.87), y: (activity * scale * 0.5) }, // Activity (bottom left)
       { x: -(weight * scale * 0.87), y: -(weight * scale * 0.5) } // Weight (top left)
     ];
-    
+
     return coords.map(coord => `${coord.x},${coord.y}`).join(' ');
   };
 
@@ -258,7 +306,7 @@ const Dashboard = () => {
                 {generateCalendar().map((day, index) => (
                   <button
                     key={index}
-                    className={`aspect-square flex items-center justify-center text-sm rounded-lg transition-colors ${
+                    className={`aspect-square flex items-center justify-center text-sm rounded-lg transition-colors relative ${
                       day === selectedDate.getDate() && 
                       selectedMonth === selectedDate.getMonth() && 
                       selectedYear === selectedDate.getFullYear()
@@ -270,6 +318,10 @@ const Dashboard = () => {
                     onClick={() => day && setSelectedDate(new Date(selectedYear, selectedMonth, day))}
                   >
                     {day}
+                    {/* Indicator for days with data */}
+                    {day && hasDataForDay(day) && (
+                      <div className="absolute bottom-1 right-1 w-2 h-2 bg-green-500 rounded-full"></div>
+                    )}
                   </button>
                 ))}
               </div>
@@ -277,33 +329,66 @@ const Dashboard = () => {
 
             {/* Daily Stats */}
             <div className="bg-white rounded-lg p-4 shadow-sm mt-4">
-              <h3 className="text-lg font-medium text-gray-800 mb-4">Thống kê hôm nay</h3>
+              <h3 className="text-lg font-medium text-gray-800 mb-4">
+                Thống kê ngày {selectedDate.getDate()}/{selectedDate.getMonth() + 1}
+              </h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Calo tiêu thụ</span>
                   <span className="text-sm font-medium text-gray-800">
-                    {dashboardData?.today?.stats?.totalCalories || 0} kcal
+                    {selectedDateData?.stats?.totalCalories || 0} kcal
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Mục tiêu</span>
                   <span className="text-sm font-medium text-gray-800">
-                    {dashboardData?.calorieTarget?.targetCalories || 2000} kcal
+                    {selectedDateData?.stats?.targetCalories || dashboardData?.calorieTarget?.targetCalories || 2000} kcal
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">Protein</span>
+                  <span className="text-sm font-medium text-gray-800">
+                    {selectedDateData?.stats?.totalProtein || 0}g
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">Carbs</span>
+                  <span className="text-sm font-medium text-gray-800">
+                    {selectedDateData?.stats?.totalCarbs || 0}g
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">Fat</span>
+                  <span className="text-sm font-medium text-gray-800">
+                    {selectedDateData?.stats?.totalFat ? Math.round(selectedDateData.stats.totalFat * 10) / 10 : 0}g
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">Cân nặng</span>
+                  <span className="text-sm font-medium text-gray-800">
+                    {selectedDateData?.bodyMetrics?.weight ? Math.round(selectedDateData.bodyMetrics.weight * 10) / 10 : '--'} kg
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">BMI</span>
                   <span className="text-sm font-medium text-gray-800">
-                    {dashboardData?.calorieTarget?.bmi || '--'}
+                    {selectedDateData?.bodyMetrics?.bmi ? Math.round(selectedDateData.bodyMetrics.bmi * 10) / 10 : '--'}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Điểm tổng thể</span>
                   <span className="text-sm font-medium text-[#3C493F]">
-                    {dashboardData?.today?.scores?.overall || 0}/100
+                    {selectedDateData?.scores?.overall || 0}/100
                   </span>
                 </div>
               </div>
+              
+              {/* No data message */}
+              {!selectedDateData && (
+                <div className="mt-4 p-3 bg-gray-50 rounded-lg text-center">
+                  <p className="text-sm text-gray-500">Không có dữ liệu cho ngày này</p>
+                </div>
+              )}
             </div>
           </div>
 
@@ -587,4 +672,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard; 
+export default Dashboard;

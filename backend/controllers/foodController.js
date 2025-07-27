@@ -245,20 +245,36 @@ const deleteFood = async (req, res) => {
 // Lấy danh sách categories
 const getCategories = async (req, res) => {
   try {
-    const categories = [
-      { value: 'protein', label: 'Thịt & Protein', icon: '🥩' },
-      { value: 'vegetables', label: 'Rau củ', icon: '🥬' },
-      { value: 'fruits', label: 'Trái cây', icon: '🍎' },
-      { value: 'grains', label: 'Ngũ cốc', icon: '🌾' },
-      { value: 'dairy', label: 'Sữa & Chế phẩm', icon: '🥛' },
-      { value: 'nuts', label: 'Hạt & Đậu', icon: '🥜' },
-      { value: 'beverages', label: 'Đồ uống', icon: '🥤' },
-      { value: 'others', label: 'Khác', icon: '🍽️' }
-    ];
+    // Lấy các categories duy nhất từ database
+    const categories = await Food.distinct('category', { isActive: true });
+    
+    // Map với icon cho mỗi category
+    const categoriesWithIcons = categories.map(category => {
+      let icon = '🍽️'; // default icon
+      
+      if (category.includes('Gạo') || category.includes('gạo')) icon = '🍚';
+      else if (category.includes('Thịt') || category.includes('thịt')) icon = '🥩';
+      else if (category.includes('Cá') || category.includes('cá') || category.includes('hải sản')) icon = '🐟';
+      else if (category.includes('Trứng') || category.includes('trứng')) icon = '🥚';
+      else if (category.includes('Rau') || category.includes('rau') || category.includes('củ')) icon = '🥬';
+      else if (category.includes('Trái cây') || category.includes('trái cây')) icon = '🍎';
+      else if (category.includes('Đậu') || category.includes('đậu')) icon = '🥜';
+      else if (category.includes('Sữa') || category.includes('sữa')) icon = '🥛';
+      else if (category.includes('Dầu') || category.includes('dầu')) icon = '🫒';
+      else if (category.includes('Đồ uống') || category.includes('đồ uống')) icon = '🥤';
+      else if (category.includes('Bánh') || category.includes('bánh') || category.includes('kẹo')) icon = '🍰';
+      else if (category.includes('Gia vị') || category.includes('gia vị')) icon = '🧂';
+      
+      return {
+        value: category,
+        label: category,
+        icon: icon
+      };
+    });
 
     res.json({
       success: true,
-      data: categories
+      data: categoriesWithIcons
     });
   } catch (error) {
     console.error('Get categories error:', error);

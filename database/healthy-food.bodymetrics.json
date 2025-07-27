@@ -1,0 +1,636 @@
+[{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d0268d"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 74.5,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.8,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1638,
+  "dailyCalories": 2539,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 12",
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.656Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d0268e"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 74.8,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.9,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1641,
+  "dailyCalories": 2544,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 11",
+  "createdAt": {
+    "$date": "2025-06-27T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-27T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d0268f"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 74.2,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.7,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1635,
+  "dailyCalories": 2534,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 10",
+  "createdAt": {
+    "$date": "2025-05-28T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02690"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 73.1,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.3,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1624,
+  "dailyCalories": 2517,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 9",
+  "createdAt": {
+    "$date": "2025-04-28T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-28T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02691"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 73.1,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.3,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1624,
+  "dailyCalories": 2517,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 8",
+  "createdAt": {
+    "$date": "2025-03-29T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-29T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02692"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 72.6,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.1,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1619,
+  "dailyCalories": 2509,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 7",
+  "createdAt": {
+    "$date": "2025-02-27T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02693"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 72,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.9,
+  "bmiCategory": "Bình thường",
+  "bmr": 1613,
+  "dailyCalories": 2500,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 6",
+  "createdAt": {
+    "$date": "2025-01-28T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-28T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02694"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 71.3,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.7,
+  "bmiCategory": "Bình thường",
+  "bmr": 1606,
+  "dailyCalories": 2489,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 5",
+  "createdAt": {
+    "$date": "2024-12-29T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-29T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02695"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 71.4,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.7,
+  "bmiCategory": "Bình thường",
+  "bmr": 1607,
+  "dailyCalories": 2491,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 4",
+  "createdAt": {
+    "$date": "2024-11-29T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-29T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02696"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 71,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.6,
+  "bmiCategory": "Bình thường",
+  "bmr": 1603,
+  "dailyCalories": 2485,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 3",
+  "createdAt": {
+    "$date": "2024-10-30T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-30T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02697"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 70,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.2,
+  "bmiCategory": "Bình thường",
+  "bmr": 1593,
+  "dailyCalories": 2469,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 2",
+  "createdAt": {
+    "$date": "2024-09-30T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-30T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d02698"
+  },
+  "user": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "height": 170,
+  "weight": 70.4,
+  "age": 35,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.4,
+  "bmiCategory": "Bình thường",
+  "bmr": 1597,
+  "dailyCalories": 2475,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "notes": "Cập nhật tháng 1",
+  "createdAt": {
+    "$date": "2024-08-31T08:21:10.657Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T08:21:10.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cbd"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 74.89319865568982,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.9,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1811,
+  "dailyCalories": 2807,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-07-27T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cbe"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 74.78521071563753,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.9,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1810,
+  "dailyCalories": 2806,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-06-27T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-27T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cbf"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 74.10916902213866,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.6,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1804,
+  "dailyCalories": 2796,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-05-28T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-28T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc0"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 73.66628485670081,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.5,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1799,
+  "dailyCalories": 2788,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-04-28T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-28T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc1"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 73.84197184947692,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.6,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1801,
+  "dailyCalories": 2792,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-03-29T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-29T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc2"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 73.2670079666568,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.4,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1795,
+  "dailyCalories": 2782,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-02-27T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc3"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 72.81649940882923,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25.2,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1791,
+  "dailyCalories": 2776,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2025-01-28T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-28T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc4"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 72.25335138292003,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 25,
+  "bmiCategory": "Thừa cân",
+  "bmr": 1785,
+  "dailyCalories": 2767,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2024-12-29T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-29T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc5"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 71.44473766074043,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.7,
+  "bmiCategory": "Bình thường",
+  "bmr": 1777,
+  "dailyCalories": 2754,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2024-11-29T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-29T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc6"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 71.19147842355511,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.6,
+  "bmiCategory": "Bình thường",
+  "bmr": 1774,
+  "dailyCalories": 2750,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2024-10-30T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-30T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc7"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 71.33906617522062,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.7,
+  "bmiCategory": "Bình thường",
+  "bmr": 1776,
+  "dailyCalories": 2753,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2024-09-30T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-09-30T08:38:18.748Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4cc8"
+  },
+  "user": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "height": 170,
+  "weight": 70.62464386661202,
+  "age": 1,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "bmi": 24.4,
+  "bmiCategory": "Bình thường",
+  "bmr": 1769,
+  "dailyCalories": 2742,
+  "idealWeightMin": 53,
+  "idealWeightMax": 72,
+  "createdAt": {
+    "$date": "2024-08-31T08:38:18.748Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-31T08:38:18.748Z"
+  },
+  "__v": 0
+}]

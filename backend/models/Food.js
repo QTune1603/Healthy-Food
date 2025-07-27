@@ -9,7 +9,21 @@ const foodSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ['protein', 'vegetables', 'fruits', 'grains', 'dairy', 'nuts', 'beverages', 'others']
+    enum: [
+      'protein', 'vegetables', 'fruits', 'grains', 'dairy', 'nuts', 'beverages', 'others',
+      'Gạo và sản phẩm từ gạo',
+      'Thịt và sản phẩm từ thịt', 
+      'Cá và hải sản',
+      'Trứng và sản phẩm từ trứng',
+      'Rau củ quả',
+      'Trái cây',
+      'Đậu và sản phẩm từ đậu',
+      'Sữa và sản phẩm từ sữa',
+      'Dầu mỡ thực vật',
+      'Đồ uống',
+      'Bánh kẹo',
+      'Gia vị và condiments'
+    ]
   },
   caloriesPer100g: {
     type: Number,

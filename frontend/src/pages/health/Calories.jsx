@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import MealDetailModal from '../../components/MealDetailModal';
 import { calorieService, mealSuggestionService } from '../../services';
 
 const Calories = () => {
@@ -17,6 +18,10 @@ const Calories = () => {
   const [mealSuggestions, setMealSuggestions] = useState([]);
   const [loadingMeals, setLoadingMeals] = useState(false);
   const [calculationHistory, setCalculationHistory] = useState([]);
+  
+  // Modal state
+  const [selectedMealId, setSelectedMealId] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Load latest calculation and meal suggestions on component mount
   useEffect(() => {
@@ -36,15 +41,18 @@ const Calories = () => {
       const response = await calorieService.getLatestCalculation();
       if (response.success && response.data) {
         setResults(response.data);
-        // Fill form with latest data
-        setFormData({
-          height: response.data.height.toString(),
-          weight: response.data.weight.toString(),
-          age: response.data.age.toString(),
-          gender: response.data.gender,
-          activityLevel: response.data.activityLevel,
-          goal: response.data.goal
-        });
+        
+        // Fill form with latest data if available
+        if (response.data.height && response.data.weight && response.data.age) {
+          setFormData({
+            height: response.data.height.toString(),
+            weight: response.data.weight.toString(),
+            age: response.data.age.toString(),
+            gender: response.data.gender || 'male',
+            activityLevel: response.data.activityLevel || 'moderate',
+            goal: response.data.goal || 'maintain'
+          });
+        }
         
         // Load meal suggestions for the latest calculation
         if (response.data.targetCalories) {
@@ -65,6 +73,7 @@ const Calories = () => {
     try {
       setLoadingMeals(true);
       const response = await mealSuggestionService.getPopularMealSuggestions(6);
+      console.log('Popular meal suggestions response:', response);
       if (response.success) {
         setMealSuggestions(response.data);
       }
@@ -79,8 +88,9 @@ const Calories = () => {
     try {
       setLoadingMeals(true);
       const response = await mealSuggestionService.getMealSuggestionsByCalories(targetCalories, 'all', 6);
+      console.log('Meal suggestions by calories response:', response);
       if (response.success) {
-        setMealSuggestions(response.data.meals);
+        setMealSuggestions(response.data.meals || response.data);
       }
     } catch (error) {
       console.error('Load meal suggestions by calories error:', error);
@@ -118,7 +128,9 @@ const Calories = () => {
         goal
       };
 
+      console.log('Sending calculation data:', calculationData);
       const response = await calorieService.calculateCalories(calculationData);
+      console.log('Received response:', response);
       
       if (response.success) {
         setResults(response.data);
@@ -128,6 +140,8 @@ const Calories = () => {
         if (response.data.targetCalories) {
           loadMealSuggestionsByCalories(response.data.targetCalories);
         }
+      } else {
+        setError(response.message || 'Có lỗi xảy ra khi tính toán');
       }
     } catch (error) {
       setError(error.message || 'Có lỗi xảy ra khi tính toán');
@@ -185,6 +199,16 @@ const Calories = () => {
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('vi-VN');
+  };
+
+  const handleMealClick = (mealId) => {
+    setSelectedMealId(mealId);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedMealId(null);
   };
 
   return (
@@ -474,7 +498,11 @@ const Calories = () => {
           ) : mealSuggestions.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {mealSuggestions.map((meal) => (
-                <div key={meal._id} className="group cursor-pointer">
+                <div 
+                  key={meal._id} 
+                  className="group cursor-pointer hover:shadow-lg transition-all duration-300 bg-white rounded-lg p-4"
+                  onClick={() => handleMealClick(meal._id)}
+                >
                   <div className="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-lg">
                     <img
                       src={meal.image}
@@ -482,11 +510,11 @@ const Calories = () => {
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h4 className="font-medium text-[#4d544e] mb-1 group-hover:text-[#4d544e]/70 transition-colors">
+                  <h4 className="font-medium text-[#4d544e] mb-1 group-hover:text-pink-500 transition-colors">
                     {meal.title}
                   </h4>
-                  <p className="text-sm text-gray-600 mb-2">{meal.description}</p>
-                  <div className="flex justify-between items-center text-sm">
+                  <p className="text-sm text-gray-600 mb-2 line-clamp-2">{meal.description}</p>
+                  <div className="flex justify-between items-center text-sm mb-2">
                     <span className="text-pink-500 font-medium">{meal.calories} Calo</span>
                     <div className="flex gap-2">
                       {meal.tags?.slice(0, 2).map((tag, index) => (
@@ -496,15 +524,18 @@ const Calories = () => {
                       ))}
                     </div>
                   </div>
-                  {meal.mealType && (
-                    <div className="mt-2">
+                  <div className="flex justify-between items-center">
+                    {meal.mealType && (
                       <span className="text-xs text-gray-500 capitalize">
                         {meal.mealType === 'breakfast' ? 'Sáng' : 
                          meal.mealType === 'lunch' ? 'Trưa' : 
                          meal.mealType === 'dinner' ? 'Tối' : 'Ăn vặt'}
                       </span>
-                    </div>
-                  )}
+                    )}
+                    <span className="text-xs text-pink-500 group-hover:text-pink-600 transition-colors">
+                      Xem chi tiết →
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -515,6 +546,13 @@ const Calories = () => {
           )}
         </div>
       </div>
+
+      {/* Meal Detail Modal */}
+      <MealDetailModal 
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        mealId={selectedMealId}
+      />
     </div>
   );
 };

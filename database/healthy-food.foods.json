@@ -1,607 +1,1458 @@
 [{
   "_id": {
-    "$oid": "686a4188411a7bf556b472ff"
+    "$oid": "688615b0bf6efc1d91ad36c6"
   },
-  "name": "Thịt gà (ức)",
-  "category": "protein",
-  "caloriesPer100g": 165,
-  "protein": 31,
-  "carbs": 0,
-  "fat": 3.6,
-  "fiber": 0,
-  "sugar": 0,
-  "sodium": 74,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.755Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.755Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47300"
-  },
-  "name": "Thịt bò (nạc)",
-  "category": "protein",
-  "caloriesPer100g": 250,
-  "protein": 26,
-  "carbs": 0,
-  "fat": 17,
-  "fiber": 0,
-  "sugar": 0,
-  "sodium": 72,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47301"
-  },
-  "name": "Cá hồi",
-  "category": "protein",
-  "caloriesPer100g": 208,
-  "protein": 25,
-  "carbs": 0,
-  "fat": 12,
-  "fiber": 0,
-  "sugar": 0,
-  "sodium": 59,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47302"
-  },
-  "name": "Trứng gà",
-  "category": "protein",
-  "caloriesPer100g": 155,
-  "protein": 13,
-  "carbs": 1.1,
-  "fat": 11,
-  "fiber": 0,
-  "sugar": 1.1,
-  "sodium": 124,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47303"
-  },
-  "name": "Đậu phụ",
-  "category": "protein",
-  "caloriesPer100g": 76,
-  "protein": 8,
-  "carbs": 1.9,
-  "fat": 4.8,
-  "fiber": 0.3,
-  "sugar": 0.6,
-  "sodium": 7,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47304"
-  },
-  "name": "Bông cải xanh",
-  "category": "vegetables",
-  "caloriesPer100g": 34,
-  "protein": 2.8,
-  "carbs": 7,
-  "fat": 0.4,
-  "fiber": 2.6,
-  "sugar": 1.5,
-  "sodium": 33,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47305"
-  },
-  "name": "Cà rót",
-  "category": "vegetables",
-  "caloriesPer100g": 25,
-  "protein": 1,
-  "carbs": 6,
-  "fat": 0.2,
-  "fiber": 3,
-  "sugar": 3.5,
-  "sodium": 2,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47306"
-  },
-  "name": "Cải bó xôi",
-  "category": "vegetables",
-  "caloriesPer100g": 23,
-  "protein": 2.9,
-  "carbs": 3.6,
-  "fat": 0.4,
-  "fiber": 2.2,
-  "sugar": 0.4,
-  "sodium": 79,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47307"
-  },
-  "name": "Cà chua",
-  "category": "vegetables",
-  "caloriesPer100g": 18,
-  "protein": 0.9,
-  "carbs": 3.9,
-  "fat": 0.2,
-  "fiber": 1.2,
-  "sugar": 2.6,
-  "sodium": 5,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47308"
-  },
-  "name": "Dưa chuột",
-  "category": "vegetables",
-  "caloriesPer100g": 16,
-  "protein": 0.7,
-  "carbs": 4,
-  "fat": 0.1,
-  "fiber": 0.5,
-  "sugar": 1.7,
-  "sodium": 2,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b47309"
-  },
-  "name": "Chuối",
-  "category": "fruits",
-  "caloriesPer100g": 89,
-  "protein": 1.1,
-  "carbs": 23,
-  "fat": 0.3,
-  "fiber": 2.6,
-  "sugar": 12,
-  "sodium": 1,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b4730a"
-  },
-  "name": "Táo",
-  "category": "fruits",
-  "caloriesPer100g": 52,
-  "protein": 0.3,
-  "carbs": 14,
-  "fat": 0.2,
-  "fiber": 2.4,
-  "sugar": 10,
-  "sodium": 1,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b4730b"
-  },
-  "name": "Cam",
-  "category": "fruits",
-  "caloriesPer100g": 47,
-  "protein": 0.9,
-  "carbs": 12,
-  "fat": 0.1,
-  "fiber": 2.4,
-  "sugar": 9,
-  "sodium": 0,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b4730c"
-  },
-  "name": "Dưa hấu",
-  "category": "fruits",
-  "caloriesPer100g": 30,
-  "protein": 0.6,
-  "carbs": 8,
-  "fat": 0.2,
-  "fiber": 0.4,
-  "sugar": 6,
-  "sodium": 1,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b4730d"
-  },
-  "name": "Nho",
-  "category": "fruits",
-  "caloriesPer100g": 62,
-  "protein": 0.6,
-  "carbs": 16,
-  "fat": 0.2,
-  "fiber": 0.9,
-  "sugar": 16,
-  "sodium": 2,
-  "unit": "g",
-  "isActive": true,
-  "__v": 0,
-  "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  },
-  "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "686a4188411a7bf556b4730e"
-  },
-  "name": "Gạo trắng (nấu chín)",
-  "category": "grains",
+  "name": "Cơm trắng",
+  "category": "Gạo và sản phẩm từ gạo",
   "caloriesPer100g": 130,
   "protein": 2.7,
   "carbs": 28,
   "fat": 0.3,
-  "fiber": 0.4,
-  "sugar": 0.1,
-  "sodium": 1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.114Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b4730f"
+    "$oid": "688615b0bf6efc1d91ad36c7"
   },
-  "name": "Yến mạch",
-  "category": "grains",
-  "caloriesPer100g": 389,
-  "protein": 17,
-  "carbs": 66,
-  "fat": 7,
-  "fiber": 11,
-  "sugar": 0.9,
-  "sodium": 2,
+  "name": "Cơm tấm",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 135,
+  "protein": 2.8,
+  "carbs": 29,
+  "fat": 0.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.114Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47310"
+    "$oid": "688615b0bf6efc1d91ad36c8"
   },
-  "name": "Bánh mì nguyên cám",
-  "category": "grains",
-  "caloriesPer100g": 247,
+  "name": "Bánh tráng",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 334,
+  "protein": 8.5,
+  "carbs": 73,
+  "fat": 1.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36c9"
+  },
+  "name": "Bánh phở",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 109,
+  "protein": 1.8,
+  "carbs": 25,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36ca"
+  },
+  "name": "Bún tươi",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 108,
+  "protein": 2,
+  "carbs": 25,
+  "fat": 0.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36cb"
+  },
+  "name": "Bánh canh",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 112,
+  "protein": 1.9,
+  "carbs": 26,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36cc"
+  },
+  "name": "Xôi nếp",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 116,
+  "protein": 2.4,
+  "carbs": 26,
+  "fat": 0.3,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36cd"
+  },
+  "name": "Bánh chưng",
+  "category": "Gạo và sản phẩm từ gạo",
+  "caloriesPer100g": 179,
+  "protein": 5.1,
+  "carbs": 32,
+  "fat": 3.8,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.114Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36cf"
+  },
+  "name": "Thịt heo nạc",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 143,
+  "protein": 20.9,
+  "carbs": 0,
+  "fat": 6.8,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d0"
+  },
+  "name": "Thịt heo ba chỉ",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 518,
+  "protein": 9.3,
+  "carbs": 0,
+  "fat": 53,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d1"
+  },
+  "name": "Thịt bò nạc",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 158,
+  "protein": 26,
+  "carbs": 0,
+  "fat": 5.7,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d2"
+  },
+  "name": "Thịt gà ta",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 135,
+  "protein": 25,
+  "carbs": 0,
+  "fat": 3.6,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d3"
+  },
+  "name": "Thịt vịt",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 201,
+  "protein": 18.3,
+  "carbs": 0,
+  "fat": 14.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d4"
+  },
+  "name": "Chả lụa",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 160,
+  "protein": 14.5,
+  "carbs": 8.2,
+  "fat": 7.8,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d5"
+  },
+  "name": "Nem nướng",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 190,
+  "protein": 16.2,
+  "carbs": 5.1,
+  "fat": 11.5,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d6"
+  },
+  "name": "Xúc xích",
+  "category": "Thịt và sản phẩm từ thịt",
+  "caloriesPer100g": 277,
+  "protein": 12.1,
+  "carbs": 3.5,
+  "fat": 24.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d8"
+  },
+  "name": "Cá rô phi",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 96,
+  "protein": 20.1,
+  "carbs": 0,
+  "fat": 1.7,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36d9"
+  },
+  "name": "Cá tra",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 156,
+  "protein": 15.6,
+  "carbs": 0,
+  "fat": 10.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36da"
+  },
+  "name": "Cá thu",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 139,
+  "protein": 21.4,
+  "carbs": 0,
+  "fat": 5.6,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36db"
+  },
+  "name": "Cá hồi",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 208,
+  "protein": 20.4,
+  "carbs": 0,
+  "fat": 13.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36dc"
+  },
+  "name": "Tôm sú",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 106,
+  "protein": 20.3,
+  "carbs": 0.9,
+  "fat": 1.7,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36dd"
+  },
+  "name": "Cua biển",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 83,
+  "protein": 18.1,
+  "carbs": 0,
+  "fat": 1.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36de"
+  },
+  "name": "Mực ống",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 92,
+  "protein": 15.6,
+  "carbs": 3.1,
+  "fat": 1.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36df"
+  },
+  "name": "Nghêu",
+  "category": "Cá và hải sản",
+  "caloriesPer100g": 86,
+  "protein": 14.2,
+  "carbs": 4.7,
+  "fat": 1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e1"
+  },
+  "name": "Trứng gà",
+  "category": "Trứng và sản phẩm từ trứng",
+  "caloriesPer100g": 155,
   "protein": 13,
-  "carbs": 41,
-  "fat": 4.2,
-  "fiber": 7,
-  "sugar": 6,
-  "sodium": 491,
+  "carbs": 1.1,
+  "fat": 10.6,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.132Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47311"
+    "$oid": "688615b0bf6efc1d91ad36e2"
+  },
+  "name": "Trứng vịt",
+  "category": "Trứng và sản phẩm từ trứng",
+  "caloriesPer100g": 185,
+  "protein": 12.8,
+  "carbs": 1.5,
+  "fat": 13.8,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e3"
+  },
+  "name": "Trứng cút",
+  "category": "Trứng và sản phẩm từ trứng",
+  "caloriesPer100g": 158,
+  "protein": 13.1,
+  "carbs": 0.4,
+  "fat": 11.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e4"
+  },
+  "name": "Trứng muối",
+  "category": "Trứng và sản phẩm từ trứng",
+  "caloriesPer100g": 195,
+  "protein": 13.6,
+  "carbs": 0.8,
+  "fat": 15.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e5"
+  },
+  "name": "Trứng chiên",
+  "category": "Trứng và sản phẩm từ trứng",
+  "caloriesPer100g": 196,
+  "protein": 13.6,
+  "carbs": 0.8,
+  "fat": 15.3,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e7"
+  },
+  "name": "Rau muống",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 19,
+  "protein": 2.6,
+  "carbs": 3.1,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e8"
+  },
+  "name": "Cải thảo",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 13,
+  "protein": 1.5,
+  "carbs": 2.2,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36e9"
+  },
+  "name": "Cà chua",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 18,
+  "protein": 0.9,
+  "carbs": 3.9,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36ea"
+  },
+  "name": "Dưa chuột",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 15,
+  "protein": 0.7,
+  "carbs": 3.6,
+  "fat": 0.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36eb"
+  },
+  "name": "Cà rót",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 25,
+  "protein": 1,
+  "carbs": 5.9,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36ec"
+  },
+  "name": "Đậu bắp",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 22,
+  "protein": 1.8,
+  "carbs": 4.3,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36ed"
   },
   "name": "Khoai tây",
-  "category": "grains",
+  "category": "Rau củ quả",
   "caloriesPer100g": 77,
   "protein": 2,
-  "carbs": 17,
+  "carbs": 17.5,
   "fat": 0.1,
-  "fiber": 2.2,
-  "sugar": 0.8,
-  "sodium": 6,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.134Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47312"
+    "$oid": "688615b0bf6efc1d91ad36ee"
   },
   "name": "Khoai lang",
-  "category": "grains",
+  "category": "Rau củ quả",
   "caloriesPer100g": 86,
   "protein": 1.6,
-  "carbs": 20,
+  "carbs": 20.1,
   "fat": 0.1,
-  "fiber": 3,
-  "sugar": 4.2,
-  "sodium": 54,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.134Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47313"
+    "$oid": "688615b0bf6efc1d91ad36ef"
   },
-  "name": "Sữa tươi nguyên chất",
-  "category": "dairy",
+  "name": "Măng tây",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 20,
+  "protein": 2.2,
+  "carbs": 3.9,
+  "fat": 0.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f0"
+  },
+  "name": "Bí đỏ",
+  "category": "Rau củ quả",
+  "caloriesPer100g": 26,
+  "protein": 1,
+  "carbs": 6.5,
+  "fat": 0.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.134Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f2"
+  },
+  "name": "Chuối",
+  "category": "Trái cây",
+  "caloriesPer100g": 89,
+  "protein": 1.1,
+  "carbs": 22.8,
+  "fat": 0.3,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f3"
+  },
+  "name": "Táo",
+  "category": "Trái cây",
+  "caloriesPer100g": 52,
+  "protein": 0.3,
+  "carbs": 13.8,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f4"
+  },
+  "name": "Cam",
+  "category": "Trái cây",
+  "caloriesPer100g": 47,
+  "protein": 0.9,
+  "carbs": 11.8,
+  "fat": 0.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f5"
+  },
+  "name": "Xoài",
+  "category": "Trái cây",
+  "caloriesPer100g": 60,
+  "protein": 0.8,
+  "carbs": 15,
+  "fat": 0.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f6"
+  },
+  "name": "Đu đủ",
+  "category": "Trái cây",
+  "caloriesPer100g": 43,
+  "protein": 0.5,
+  "carbs": 10.8,
+  "fat": 0.3,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f7"
+  },
+  "name": "Dứa",
+  "category": "Trái cây",
+  "caloriesPer100g": 50,
+  "protein": 0.5,
+  "carbs": 13.1,
+  "fat": 0.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f8"
+  },
+  "name": "Nho",
+  "category": "Trái cây",
+  "caloriesPer100g": 62,
+  "protein": 0.6,
+  "carbs": 16.3,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36f9"
+  },
+  "name": "Dưa hấu",
+  "category": "Trái cây",
+  "caloriesPer100g": 30,
+  "protein": 0.6,
+  "carbs": 7.6,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36fa"
+  },
+  "name": "Vải",
+  "category": "Trái cây",
+  "caloriesPer100g": 66,
+  "protein": 0.8,
+  "carbs": 16.5,
+  "fat": 0.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36fb"
+  },
+  "name": "Mít",
+  "category": "Trái cây",
+  "caloriesPer100g": 95,
+  "protein": 1.7,
+  "carbs": 23.3,
+  "fat": 0.6,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.137Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36fd"
+  },
+  "name": "Đậu hũ",
+  "category": "Đậu và sản phẩm từ đậu",
+  "caloriesPer100g": 76,
+  "protein": 8.1,
+  "carbs": 1.9,
+  "fat": 4.8,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36fe"
+  },
+  "name": "Tương đậu nành",
+  "category": "Đậu và sản phẩm từ đậu",
+  "caloriesPer100g": 192,
+  "protein": 14.4,
+  "carbs": 14.2,
+  "fat": 9,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad36ff"
+  },
+  "name": "Đậu xanh",
+  "category": "Đậu và sản phẩm từ đậu",
+  "caloriesPer100g": 347,
+  "protein": 23.9,
+  "carbs": 58.9,
+  "fat": 1.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3700"
+  },
+  "name": "Đậu đen",
+  "category": "Đậu và sản phẩm từ đậu",
+  "caloriesPer100g": 341,
+  "protein": 21.6,
+  "carbs": 63.4,
+  "fat": 1.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3701"
+  },
+  "name": "Đậu phộng",
+  "category": "Đậu và sản phẩm từ đậu",
+  "caloriesPer100g": 567,
+  "protein": 25.8,
+  "carbs": 16.1,
+  "fat": 49.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3702"
+  },
+  "name": "Chế biến đậu",
+  "category": "Đậu và sản phẩm từ đậu",
+  "caloriesPer100g": 150,
+  "protein": 12,
+  "carbs": 8.5,
+  "fat": 7.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.139Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3704"
+  },
+  "name": "Sữa bò tươi",
+  "category": "Sữa và sản phẩm từ sữa",
   "caloriesPer100g": 42,
   "protein": 3.4,
   "carbs": 5,
   "fat": 1,
   "fiber": 0,
-  "sugar": 5,
-  "sodium": 44,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.142Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.142Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47314"
+    "$oid": "688615b0bf6efc1d91ad3705"
   },
-  "name": "Sữa chua Hy Lạp",
-  "category": "dairy",
+  "name": "Sữa chua",
+  "category": "Sữa và sản phẩm từ sữa",
   "caloriesPer100g": 59,
-  "protein": 10,
-  "carbs": 3.6,
-  "fat": 0.4,
+  "protein": 3.5,
+  "carbs": 4.7,
+  "fat": 3.3,
   "fiber": 0,
-  "sugar": 3.6,
-  "sodium": 36,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.142Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.142Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47315"
+    "$oid": "688615b0bf6efc1d91ad3706"
   },
-  "name": "Phô mai Cheddar",
-  "category": "dairy",
-  "caloriesPer100g": 403,
-  "protein": 25,
-  "carbs": 1.3,
-  "fat": 33,
+  "name": "Phô mai",
+  "category": "Sữa và sản phẩm từ sữa",
+  "caloriesPer100g": 113,
+  "protein": 7.1,
+  "carbs": 0.4,
+  "fat": 9.3,
   "fiber": 0,
-  "sugar": 0.5,
-  "sodium": 621,
+  "sugar": 0,
+  "sodium": 0,
   "unit": "g",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.142Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.142Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47316"
+    "$oid": "688615b0bf6efc1d91ad3707"
   },
-  "name": "Hạnh nhân",
-  "category": "nuts",
-  "caloriesPer100g": 579,
-  "protein": 21,
-  "carbs": 22,
-  "fat": 50,
-  "fiber": 12,
-  "sugar": 4,
-  "sodium": 1,
-  "unit": "g",
+  "name": "Kem tươi",
+  "category": "Sữa và sản phẩm từ sữa",
+  "caloriesPer100g": 345,
+  "protein": 2.8,
+  "carbs": 2.9,
+  "fat": 36.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.142Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.142Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47317"
+    "$oid": "688615b0bf6efc1d91ad3709"
   },
-  "name": "Óc chó",
-  "category": "nuts",
-  "caloriesPer100g": 654,
-  "protein": 15,
-  "carbs": 14,
-  "fat": 65,
-  "fiber": 7,
-  "sugar": 2.6,
-  "sodium": 2,
-  "unit": "g",
+  "name": "Dầu ăn",
+  "category": "Dầu mỡ thực vật",
+  "caloriesPer100g": 884,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 100,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.144Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.144Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47318"
+    "$oid": "688615b0bf6efc1d91ad370a"
   },
-  "name": "Đậu phộng",
-  "category": "nuts",
-  "caloriesPer100g": 567,
-  "protein": 26,
-  "carbs": 16,
-  "fat": 49,
-  "fiber": 8,
-  "sugar": 4,
-  "sodium": 18,
-  "unit": "g",
+  "name": "Dầu dừa",
+  "category": "Dầu mỡ thực vật",
+  "caloriesPer100g": 862,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 99.1,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.144Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.144Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b47319"
+    "$oid": "688615b0bf6efc1d91ad370b"
+  },
+  "name": "Dầu olive",
+  "category": "Dầu mỡ thực vật",
+  "caloriesPer100g": 884,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 100,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.144Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.144Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad370c"
+  },
+  "name": "Bơ thực vật",
+  "category": "Dầu mỡ thực vật",
+  "caloriesPer100g": 717,
+  "protein": 0.9,
+  "carbs": 0.7,
+  "fat": 81,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.144Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.144Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad370e"
   },
   "name": "Nước lọc",
-  "category": "beverages",
+  "category": "Đồ uống",
   "caloriesPer100g": 0,
   "protein": 0,
   "carbs": 0,
@@ -611,103 +1462,425 @@
   "sodium": 0,
   "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.146Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b4731a"
+    "$oid": "688615b0bf6efc1d91ad370f"
   },
-  "name": "Trà xanh",
-  "category": "beverages",
-  "caloriesPer100g": 1,
+  "name": "Nước ngọt",
+  "category": "Đồ uống",
+  "caloriesPer100g": 42,
   "protein": 0,
-  "carbs": 0,
+  "carbs": 10.6,
   "fat": 0,
   "fiber": 0,
   "sugar": 0,
-  "sodium": 1,
+  "sodium": 0,
   "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.146Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b4731b"
+    "$oid": "688615b0bf6efc1d91ad3710"
+  },
+  "name": "Bia",
+  "category": "Đồ uống",
+  "caloriesPer100g": 43,
+  "protein": 0.5,
+  "carbs": 3.6,
+  "fat": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3711"
   },
   "name": "Cà phê đen",
-  "category": "beverages",
+  "category": "Đồ uống",
   "caloriesPer100g": 2,
   "protein": 0.3,
   "carbs": 0,
   "fat": 0,
   "fiber": 0,
   "sugar": 0,
-  "sodium": 5,
+  "sodium": 0,
   "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.146Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b4731c"
+    "$oid": "688615b0bf6efc1d91ad3712"
   },
-  "name": "Dầu ô liu",
-  "category": "others",
-  "caloriesPer100g": 884,
-  "protein": 0,
+  "name": "Trà xanh",
+  "category": "Đồ uống",
+  "caloriesPer100g": 1,
+  "protein": 0.2,
   "carbs": 0,
-  "fat": 100,
+  "fat": 0,
   "fiber": 0,
   "sugar": 0,
-  "sodium": 2,
+  "sodium": 0,
   "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.146Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "686a4188411a7bf556b4731d"
+    "$oid": "688615b0bf6efc1d91ad3713"
   },
-  "name": "Mật ong",
-  "category": "others",
-  "caloriesPer100g": 304,
-  "protein": 0.3,
-  "carbs": 82,
-  "fat": 0,
-  "fiber": 0.2,
-  "sugar": 82,
-  "sodium": 4,
-  "unit": "g",
+  "name": "Nước dừa",
+  "category": "Đồ uống",
+  "caloriesPer100g": 19,
+  "protein": 0.7,
+  "carbs": 3.7,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
   "isActive": true,
-  "__v": 0,
   "createdAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
+    "$date": "2025-07-27T12:04:00.146Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T09:27:36.756Z"
-  }
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3714"
+  },
+  "name": "Nước chanh",
+  "category": "Đồ uống",
+  "caloriesPer100g": 22,
+  "protein": 0.4,
+  "carbs": 6.9,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.146Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3716"
+  },
+  "name": "Bánh mì",
+  "category": "Bánh kẹo",
+  "caloriesPer100g": 265,
+  "protein": 9,
+  "carbs": 49,
+  "fat": 3.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3717"
+  },
+  "name": "Bánh quy",
+  "category": "Bánh kẹo",
+  "caloriesPer100g": 502,
+  "protein": 5.9,
+  "carbs": 62.1,
+  "fat": 25.4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3718"
+  },
+  "name": "Bánh flan",
+  "category": "Bánh kẹo",
+  "caloriesPer100g": 127,
+  "protein": 4.4,
+  "carbs": 19.2,
+  "fat": 4,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3719"
+  },
+  "name": "Kẹo",
+  "category": "Bánh kẹo",
+  "caloriesPer100g": 394,
+  "protein": 0,
+  "carbs": 98,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad371a"
+  },
+  "name": "Chocolate",
+  "category": "Bánh kẹo",
+  "caloriesPer100g": 546,
+  "protein": 4.9,
+  "carbs": 61,
+  "fat": 31.3,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad371b"
+  },
+  "name": "Bánh bông lan",
+  "category": "Bánh kẹo",
+  "caloriesPer100g": 347,
+  "protein": 6.8,
+  "carbs": 58,
+  "fat": 10.8,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.149Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad371d"
+  },
+  "name": "Muối",
+  "category": "Gia vị và condiments",
+  "caloriesPer100g": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad371e"
+  },
+  "name": "Đường",
+  "category": "Gia vị và condiments",
+  "caloriesPer100g": 387,
+  "protein": 0,
+  "carbs": 99.8,
+  "fat": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad371f"
+  },
+  "name": "Nước mắm",
+  "category": "Gia vị và condiments",
+  "caloriesPer100g": 10,
+  "protein": 1.4,
+  "carbs": 0.6,
+  "fat": 0,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "ml",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3720"
+  },
+  "name": "Tương ớt",
+  "category": "Gia vị và condiments",
+  "caloriesPer100g": 93,
+  "protein": 1.6,
+  "carbs": 18,
+  "fat": 0.9,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3721"
+  },
+  "name": "Tỏi",
+  "category": "Gia vị và condiments",
+  "caloriesPer100g": 149,
+  "protein": 6.4,
+  "carbs": 33.1,
+  "fat": 0.5,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688615b0bf6efc1d91ad3722"
+  },
+  "name": "Hành lá",
+  "category": "Gia vị và condiments",
+  "caloriesPer100g": 32,
+  "protein": 1.8,
+  "carbs": 7.3,
+  "fat": 0.2,
+  "fiber": 0,
+  "sugar": 0,
+  "sodium": 0,
+  "unit": "g",
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T12:04:00.153Z"
+  },
+  "__v": 0
 }]

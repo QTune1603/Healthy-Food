@@ -1,12 +1,564 @@
 [{
   "_id": {
-    "$oid": "686aaa52c78de6221f6b624c"
+    "$oid": "6885e176e3dca981a8d027c4"
   },
   "userId": {
-    "$oid": "686a32b42bf267cc23846bb6"
+    "$oid": "6885e0a01cf15dcf1360734f"
   },
   "date": {
-    "$date": "2025-07-05T17:00:00.000Z"
+    "$date": "2025-07-09T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2606,
+    "targetCalories": 2469,
+    "totalProtein": 128.5,
+    "totalCarbs": 561.6,
+    "totalFat": 26.099999999999998,
+    "totalFiber": 36,
+    "waterIntake": 1651,
+    "exerciseMinutes": 23,
+    "steps": 8950,
+    "sleep": 7.7
+  },
+  "bodyMetrics": {
+    "weight": 75.1,
+    "height": 170,
+    "bmi": 26,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 69
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 81,
+    "hydration": 83,
+    "sleep": 96,
+    "weight": 49,
+    "overall": 82
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027c5"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-08T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2283,
+    "targetCalories": 2469,
+    "totalProtein": 151.49999999999997,
+    "totalCarbs": 237.6,
+    "totalFat": 92.49999999999997,
+    "totalFiber": 32,
+    "waterIntake": 2290,
+    "exerciseMinutes": 18,
+    "steps": 10969,
+    "sleep": 7.6
+  },
+  "bodyMetrics": {
+    "weight": 74.9,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 68
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 79,
+    "hydration": 100,
+    "sleep": 94,
+    "weight": 51,
+    "overall": 85
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027c6"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-07T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2125,
+    "targetCalories": 2469,
+    "totalProtein": 99.5,
+    "totalCarbs": 316.59999999999997,
+    "totalFat": 69.1,
+    "totalFiber": 30,
+    "waterIntake": 1616,
+    "exerciseMinutes": 19,
+    "steps": 9179,
+    "sleep": 6.8
+  },
+  "bodyMetrics": {
+    "weight": 74.1,
+    "height": 170,
+    "bmi": 25.6,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 62
+  },
+  "scores": {
+    "nutrition": 92,
+    "exercise": 75,
+    "hydration": 81,
+    "sleep": 82,
+    "weight": 59,
+    "overall": 78
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027c7"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-06T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2426,
+    "targetCalories": 2469,
+    "totalProtein": 226.2,
+    "totalCarbs": 84.9,
+    "totalFat": 134.8,
+    "totalFiber": 34,
+    "waterIntake": 2208,
+    "exerciseMinutes": 60,
+    "steps": 6218,
+    "sleep": 7.4
+  },
+  "bodyMetrics": {
+    "weight": 74.8,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 64
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 91,
+    "weight": 52,
+    "overall": 89
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027c8"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-05T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2177,
+    "targetCalories": 2469,
+    "totalProtein": 142.90000000000003,
+    "totalCarbs": 444,
+    "totalFat": 16.400000000000002,
+    "totalFiber": 30,
+    "waterIntake": 2176,
+    "exerciseMinutes": 61,
+    "steps": 13667,
+    "sleep": 8.3
+  },
+  "bodyMetrics": {
+    "weight": 74.2,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 96,
+    "weight": 58,
+    "overall": 91
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027c9"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-04T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2856,
+    "targetCalories": 2469,
+    "totalProtein": 227.1,
+    "totalCarbs": 209.9,
+    "totalFat": 137.2,
+    "totalFiber": 40,
+    "waterIntake": 2420,
+    "exerciseMinutes": 38,
+    "steps": 9720,
+    "sleep": 7.3
+  },
+  "bodyMetrics": {
+    "weight": 74.2,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 64
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 90,
+    "weight": 58,
+    "overall": 90
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027ca"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-03T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2386,
+    "targetCalories": 2469,
+    "totalProtein": 145.3,
+    "totalCarbs": 318.4,
+    "totalFat": 72.19999999999999,
+    "totalFiber": 33,
+    "waterIntake": 2241,
+    "exerciseMinutes": 35,
+    "steps": 9729,
+    "sleep": 7.9
+  },
+  "bodyMetrics": {
+    "weight": 74.7,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 64
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 98,
+    "weight": 53,
+    "overall": 90
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027cb"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-02T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2133,
+    "targetCalories": 2469,
+    "totalProtein": 26.099999999999998,
+    "totalCarbs": 296.5,
+    "totalFat": 7,
+    "totalFiber": 30,
+    "waterIntake": 1753,
+    "exerciseMinutes": 71,
+    "steps": 7929,
+    "sleep": 7.3
+  },
+  "bodyMetrics": {
+    "weight": 74,
+    "height": 170,
+    "bmi": 25.6,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 71
+  },
+  "scores": {
+    "nutrition": 69,
+    "exercise": 100,
+    "hydration": 88,
+    "sleep": 89,
+    "weight": 60,
+    "overall": 81
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027cc"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-07-01T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2188,
+    "targetCalories": 2469,
+    "totalProtein": 190.6,
+    "totalCarbs": 185.89999999999998,
+    "totalFat": 81.60000000000001,
+    "totalFiber": 31,
+    "waterIntake": 2212,
+    "exerciseMinutes": 37,
+    "steps": 12473,
+    "sleep": 7.9
+  },
+  "bodyMetrics": {
+    "weight": 74.9,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 70
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 99,
+    "weight": 51,
+    "overall": 90
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027cd"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-06-30T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2349,
+    "targetCalories": 2469,
+    "totalProtein": 346.3,
+    "totalCarbs": 117.9,
+    "totalFat": 68.5,
+    "totalFiber": 33,
+    "waterIntake": 2008,
+    "exerciseMinutes": 48,
+    "steps": 11005,
+    "sleep": 7.1
+  },
+  "bodyMetrics": {
+    "weight": 74.9,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 65
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 86,
+    "weight": 51,
+    "overall": 87
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027ce"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-06-29T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2223,
+    "targetCalories": 2469,
+    "totalProtein": 123.4,
+    "totalCarbs": 424.9,
+    "totalFat": 19.699999999999996,
+    "totalFiber": 31,
+    "waterIntake": 1870,
+    "exerciseMinutes": 20,
+    "steps": 12501,
+    "sleep": 7.2
+  },
+  "bodyMetrics": {
+    "weight": 74.4,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 65
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 89,
+    "hydration": 94,
+    "sleep": 87,
+    "weight": 56,
+    "overall": 85
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e176e3dca981a8d027cf"
+  },
+  "userId": {
+    "$oid": "6885e0a01cf15dcf1360734f"
+  },
+  "date": {
+    "$date": "2025-06-28T08:21:10.733Z"
+  },
+  "stats": {
+    "totalCalories": 2206,
+    "targetCalories": 2469,
+    "totalProtein": 57.1,
+    "totalCarbs": 356.59999999999997,
+    "totalFat": 6.699999999999999,
+    "totalFiber": 31,
+    "waterIntake": 1974,
+    "exerciseMinutes": 20,
+    "steps": 6362,
+    "sleep": 6.6
+  },
+  "bodyMetrics": {
+    "weight": 74.6,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 35,
+    "activityLevel": "moderately_active",
+    "healthScore": 65
+  },
+  "scores": {
+    "nutrition": 81,
+    "exercise": 65,
+    "hydration": 99,
+    "sleep": 79,
+    "weight": 54,
+    "overall": 76
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-27T08:21:10.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6885e1b8bb028e364d1057ca"
+  },
+  "userId": {
+    "$oid": "6885c254a055ac0786a41d1a"
+  },
+  "date": {
+    "$date": "2025-07-26T17:00:00.000Z"
   },
   "stats": {
     "totalCalories": 0,
@@ -37,56 +589,1390 @@
     "overall": 0
   },
   "createdAt": {
-    "$date": "2025-07-06T16:54:42.442Z"
+    "$date": "2025-07-27T08:22:16.792Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T16:54:42.442Z"
+    "$date": "2025-07-27T08:22:16.792Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "686aaba7c78de6221f6b6292"
+    "$oid": "6885e57a7bf13bfe272e4deb"
   },
   "userId": {
     "$oid": "686a32b42bf267cc23846bb6"
   },
   "date": {
-    "$date": "2025-07-06T17:00:00.000Z"
+    "$date": "2025-07-27T08:38:18.828Z"
   },
   "stats": {
-    "totalCalories": 0,
-    "targetCalories": 2000,
-    "totalProtein": 0,
-    "totalCarbs": 0,
-    "totalFat": 0,
-    "totalFiber": 0,
-    "waterIntake": 0,
-    "exerciseMinutes": 0,
-    "steps": 0,
-    "sleep": 0
+    "totalCalories": 1813,
+    "targetCalories": 2233,
+    "totalProtein": 146.5,
+    "totalCarbs": 339.8,
+    "totalFat": 17.400000000000002,
+    "totalFiber": 25,
+    "waterIntake": 2168,
+    "exerciseMinutes": 74,
+    "steps": 6163,
+    "sleep": 8.4
   },
   "bodyMetrics": {
-    "weight": 70,
+    "weight": 74.89319865568982,
     "height": 170,
-    "bmi": 22,
-    "age": 25,
+    "bmi": 25.9,
+    "age": 1,
     "activityLevel": "moderately_active",
-    "healthScore": 0
+    "healthScore": 62
   },
   "scores": {
-    "nutrition": 0,
-    "exercise": 0,
-    "hydration": 0,
-    "sleep": 0,
-    "weight": 0,
-    "overall": 0
+    "nutrition": 81,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 51,
+    "overall": 86
   },
   "createdAt": {
-    "$date": "2025-07-06T17:00:23.008Z"
+    "$date": "2025-07-27T08:38:18.828Z"
   },
   "updatedAt": {
-    "$date": "2025-07-06T17:00:23.008Z"
+    "$date": "2025-07-27T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dec"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-26T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2424,
+    "targetCalories": 2233,
+    "totalProtein": 232.9,
+    "totalCarbs": 186.8,
+    "totalFat": 85.29999999999998,
+    "totalFiber": 34,
+    "waterIntake": 2123,
+    "exerciseMinutes": 38,
+    "steps": 8957,
+    "sleep": 8.5
+  },
+  "bodyMetrics": {
+    "weight": 74.81923051907303,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 52,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-26T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-26T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4ded"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-25T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 1874,
+    "targetCalories": 2233,
+    "totalProtein": 39,
+    "totalCarbs": 360.4,
+    "totalFat": 11.4,
+    "totalFiber": 26,
+    "waterIntake": 1600,
+    "exerciseMinutes": 36,
+    "steps": 12747,
+    "sleep": 8.4
+  },
+  "bodyMetrics": {
+    "weight": 74.64426305608376,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 65
+  },
+  "scores": {
+    "nutrition": 84,
+    "exercise": 100,
+    "hydration": 80,
+    "sleep": 100,
+    "weight": 54,
+    "overall": 83
+  },
+  "createdAt": {
+    "$date": "2025-07-25T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-25T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dee"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-24T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2304,
+    "targetCalories": 2233,
+    "totalProtein": 143.10000000000002,
+    "totalCarbs": 411.40000000000003,
+    "totalFat": 21.000000000000004,
+    "totalFiber": 32,
+    "waterIntake": 1595,
+    "exerciseMinutes": 74,
+    "steps": 9964,
+    "sleep": 8.1
+  },
+  "bodyMetrics": {
+    "weight": 74.74411498341995,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 80,
+    "sleep": 100,
+    "weight": 53,
+    "overall": 86
+  },
+  "createdAt": {
+    "$date": "2025-07-24T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-24T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4def"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-23T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2518,
+    "targetCalories": 2233,
+    "totalProtein": 99.99999999999999,
+    "totalCarbs": 342.4,
+    "totalFat": 42.7,
+    "totalFiber": 35,
+    "waterIntake": 1947,
+    "exerciseMinutes": 59,
+    "steps": 6944,
+    "sleep": 8.5
+  },
+  "bodyMetrics": {
+    "weight": 74.66274125333024,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 65
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 97,
+    "sleep": 100,
+    "weight": 53,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-23T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-23T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df0"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-22T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2088,
+    "targetCalories": 2233,
+    "totalProtein": 156.6,
+    "totalCarbs": 154.00000000000003,
+    "totalFat": 39.300000000000004,
+    "totalFiber": 29,
+    "waterIntake": 2301,
+    "exerciseMinutes": 63,
+    "steps": 9363,
+    "sleep": 7.7
+  },
+  "bodyMetrics": {
+    "weight": 74.52257254384182,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 69
+  },
+  "scores": {
+    "nutrition": 94,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 55,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-22T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-22T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df1"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-21T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2328,
+    "targetCalories": 2233,
+    "totalProtein": 129.9,
+    "totalCarbs": 458.40000000000003,
+    "totalFat": 31.900000000000002,
+    "totalFiber": 33,
+    "waterIntake": 2496,
+    "exerciseMinutes": 74,
+    "steps": 6288,
+    "sleep": 7.5
+  },
+  "bodyMetrics": {
+    "weight": 74.9950423323704,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 50,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-21T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-21T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df2"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-20T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 1936,
+    "targetCalories": 2233,
+    "totalProtein": 235.1,
+    "totalCarbs": 84.9,
+    "totalFat": 64.6,
+    "totalFiber": 27,
+    "waterIntake": 1665,
+    "exerciseMinutes": 38,
+    "steps": 5620,
+    "sleep": 7.8
+  },
+  "bodyMetrics": {
+    "weight": 75.24882713478632,
+    "height": 170,
+    "bmi": 26,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 61
+  },
+  "scores": {
+    "nutrition": 87,
+    "exercise": 100,
+    "hydration": 83,
+    "sleep": 100,
+    "weight": 50,
+    "overall": 84
+  },
+  "createdAt": {
+    "$date": "2025-07-20T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-20T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df3"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-19T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2657,
+    "targetCalories": 2233,
+    "totalProtein": 230.4,
+    "totalCarbs": 200.8,
+    "totalFat": 76.2,
+    "totalFiber": 37,
+    "waterIntake": 2316,
+    "exerciseMinutes": 74,
+    "steps": 6395,
+    "sleep": 8.3
+  },
+  "bodyMetrics": {
+    "weight": 74.64600223713909,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 54,
+    "overall": 91
+  },
+  "createdAt": {
+    "$date": "2025-07-19T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-19T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df4"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-18T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2536,
+    "targetCalories": 2233,
+    "totalProtein": 184.4,
+    "totalCarbs": 390.9,
+    "totalFat": 48.099999999999994,
+    "totalFiber": 36,
+    "waterIntake": 2180,
+    "exerciseMinutes": 26,
+    "steps": 7739,
+    "sleep": 6.7
+  },
+  "bodyMetrics": {
+    "weight": 74.7042441184446,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 88,
+    "hydration": 100,
+    "sleep": 74,
+    "weight": 53,
+    "overall": 83
+  },
+  "createdAt": {
+    "$date": "2025-07-18T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-18T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df5"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-17T08:38:18.828Z"
+  },
+  "stats": {
+    "totalCalories": 2648,
+    "targetCalories": 2233,
+    "totalProtein": 234.2,
+    "totalCarbs": 370.7,
+    "totalFat": 49.5,
+    "totalFiber": 37,
+    "waterIntake": 2054,
+    "exerciseMinutes": 48,
+    "steps": 12961,
+    "sleep": 7.7
+  },
+  "bodyMetrics": {
+    "weight": 74.9968067774428,
+    "height": 170,
+    "bmi": 26,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 50,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-17T08:38:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-17T08:38:18.828Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df6"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-16T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2491,
+    "targetCalories": 2233,
+    "totalProtein": 201.4,
+    "totalCarbs": 134.4,
+    "totalFat": 38.00000000000001,
+    "totalFiber": 35,
+    "waterIntake": 1641,
+    "exerciseMinutes": 27,
+    "steps": 8698,
+    "sleep": 6.7
+  },
+  "bodyMetrics": {
+    "weight": 75.13018016707552,
+    "height": 170,
+    "bmi": 26,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 64
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 89,
+    "hydration": 82,
+    "sleep": 75,
+    "weight": 50,
+    "overall": 79
+  },
+  "createdAt": {
+    "$date": "2025-07-16T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-16T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df7"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-15T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2396,
+    "targetCalories": 2233,
+    "totalProtein": 220.20000000000002,
+    "totalCarbs": 364.40000000000003,
+    "totalFat": 29.1,
+    "totalFiber": 34,
+    "waterIntake": 1949,
+    "exerciseMinutes": 24,
+    "steps": 5938,
+    "sleep": 7.8
+  },
+  "bodyMetrics": {
+    "weight": 75.25555816829485,
+    "height": 170,
+    "bmi": 26,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 61
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 79,
+    "hydration": 97,
+    "sleep": 100,
+    "weight": 50,
+    "overall": 85
+  },
+  "createdAt": {
+    "$date": "2025-07-15T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-15T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df8"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-14T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2030,
+    "targetCalories": 2233,
+    "totalProtein": 114.39999999999999,
+    "totalCarbs": 355.4,
+    "totalFat": 26.500000000000004,
+    "totalFiber": 28,
+    "waterIntake": 2350,
+    "exerciseMinutes": 65,
+    "steps": 6267,
+    "sleep": 7.7
+  },
+  "bodyMetrics": {
+    "weight": 74.53005449768992,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 91,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 55,
+    "overall": 89
+  },
+  "createdAt": {
+    "$date": "2025-07-14T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-14T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4df9"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-13T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2151,
+    "targetCalories": 2233,
+    "totalProtein": 263.6,
+    "totalCarbs": 147.7,
+    "totalFat": 62.39999999999999,
+    "totalFiber": 30,
+    "waterIntake": 1690,
+    "exerciseMinutes": 36,
+    "steps": 6624,
+    "sleep": 6.7
+  },
+  "bodyMetrics": {
+    "weight": 75.30537497926572,
+    "height": 170,
+    "bmi": 26.1,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 69
+  },
+  "scores": {
+    "nutrition": 96,
+    "exercise": 100,
+    "hydration": 84,
+    "sleep": 74,
+    "weight": 50,
+    "overall": 81
+  },
+  "createdAt": {
+    "$date": "2025-07-13T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-13T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dfa"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-12T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 1941,
+    "targetCalories": 2233,
+    "totalProtein": 103.1,
+    "totalCarbs": 359.20000000000005,
+    "totalFat": 28.7,
+    "totalFiber": 27,
+    "waterIntake": 2246,
+    "exerciseMinutes": 36,
+    "steps": 8905,
+    "sleep": 7.2
+  },
+  "bodyMetrics": {
+    "weight": 74.69974113740204,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 70
+  },
+  "scores": {
+    "nutrition": 87,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 53,
+    "overall": 88
+  },
+  "createdAt": {
+    "$date": "2025-07-12T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-12T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dfb"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-11T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2650,
+    "targetCalories": 2233,
+    "totalProtein": 99.80000000000001,
+    "totalCarbs": 631.6,
+    "totalFat": 16.400000000000002,
+    "totalFiber": 37,
+    "waterIntake": 2026,
+    "exerciseMinutes": 29,
+    "steps": 8726,
+    "sleep": 7
+  },
+  "bodyMetrics": {
+    "weight": 74.40318018391872,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 95,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 56,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-11T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-11T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dfc"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-10T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2325,
+    "targetCalories": 2233,
+    "totalProtein": 147.29999999999998,
+    "totalCarbs": 370.30000000000007,
+    "totalFat": 55.099999999999994,
+    "totalFiber": 33,
+    "waterIntake": 2487,
+    "exerciseMinutes": 67,
+    "steps": 5074,
+    "sleep": 6.8
+  },
+  "bodyMetrics": {
+    "weight": 74.45577130695797,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 76,
+    "weight": 55,
+    "overall": 86
+  },
+  "createdAt": {
+    "$date": "2025-07-10T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-10T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dfd"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-09T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2546,
+    "targetCalories": 2233,
+    "totalProtein": 352.6,
+    "totalCarbs": 226.90000000000003,
+    "totalFat": 58.3,
+    "totalFiber": 36,
+    "waterIntake": 1958,
+    "exerciseMinutes": 59,
+    "steps": 7541,
+    "sleep": 7.3
+  },
+  "bodyMetrics": {
+    "weight": 74.58208770644113,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 98,
+    "sleep": 100,
+    "weight": 54,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-07-09T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-09T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dfe"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-08T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 1867,
+    "targetCalories": 2233,
+    "totalProtein": 132.89999999999998,
+    "totalCarbs": 320.40000000000003,
+    "totalFat": 21.2,
+    "totalFiber": 26,
+    "waterIntake": 2205,
+    "exerciseMinutes": 74,
+    "steps": 10940,
+    "sleep": 7.8
+  },
+  "bodyMetrics": {
+    "weight": 74.7580187975482,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 84,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 52,
+    "overall": 87
+  },
+  "createdAt": {
+    "$date": "2025-07-08T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-08T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4dff"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-07T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 1890,
+    "targetCalories": 2233,
+    "totalProtein": 165.1,
+    "totalCarbs": 180.39999999999998,
+    "totalFat": 66.19999999999999,
+    "totalFiber": 26,
+    "waterIntake": 2091,
+    "exerciseMinutes": 25,
+    "steps": 7488,
+    "sleep": 8.4
+  },
+  "bodyMetrics": {
+    "weight": 74.81399995165418,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 68
+  },
+  "scores": {
+    "nutrition": 85,
+    "exercise": 84,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 52,
+    "overall": 84
+  },
+  "createdAt": {
+    "$date": "2025-07-07T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e00"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-06T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2316,
+    "targetCalories": 2233,
+    "totalProtein": 100.39999999999999,
+    "totalCarbs": 315.1,
+    "totalFat": 26.2,
+    "totalFiber": 32,
+    "waterIntake": 2205,
+    "exerciseMinutes": 72,
+    "steps": 10835,
+    "sleep": 7.8
+  },
+  "bodyMetrics": {
+    "weight": 74.54935050747416,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 64
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 55,
+    "overall": 91
+  },
+  "createdAt": {
+    "$date": "2025-07-06T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-06T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e01"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-05T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2366,
+    "targetCalories": 2233,
+    "totalProtein": 128.2,
+    "totalCarbs": 257.5,
+    "totalFat": 29.9,
+    "totalFiber": 33,
+    "waterIntake": 2287,
+    "exerciseMinutes": 43,
+    "steps": 6813,
+    "sleep": 7.2
+  },
+  "bodyMetrics": {
+    "weight": 74.74879153410966,
+    "height": 170,
+    "bmi": 25.9,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 71
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 53,
+    "overall": 91
+  },
+  "createdAt": {
+    "$date": "2025-07-05T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-05T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e02"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-04T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2417,
+    "targetCalories": 2233,
+    "totalProtein": 172.9,
+    "totalCarbs": 387.20000000000005,
+    "totalFat": 40,
+    "totalFiber": 34,
+    "waterIntake": 2319,
+    "exerciseMinutes": 43,
+    "steps": 10733,
+    "sleep": 7.5
+  },
+  "bodyMetrics": {
+    "weight": 74.28133543450423,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 69
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 57,
+    "overall": 91
+  },
+  "createdAt": {
+    "$date": "2025-07-04T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-04T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e03"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-03T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 1967,
+    "targetCalories": 2233,
+    "totalProtein": 153.10000000000002,
+    "totalCarbs": 196.70000000000002,
+    "totalFat": 56.40000000000001,
+    "totalFiber": 28,
+    "waterIntake": 1508,
+    "exerciseMinutes": 36,
+    "steps": 5593,
+    "sleep": 7.9
+  },
+  "bodyMetrics": {
+    "weight": 74.38767196136115,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 67
+  },
+  "scores": {
+    "nutrition": 88,
+    "exercise": 100,
+    "hydration": 75,
+    "sleep": 100,
+    "weight": 56,
+    "overall": 84
+  },
+  "createdAt": {
+    "$date": "2025-07-03T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-03T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e04"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-02T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 1981,
+    "targetCalories": 2233,
+    "totalProtein": 134.50000000000003,
+    "totalCarbs": 221.49999999999997,
+    "totalFat": 58.2,
+    "totalFiber": 28,
+    "waterIntake": 1509,
+    "exerciseMinutes": 40,
+    "steps": 12516,
+    "sleep": 7.8
+  },
+  "bodyMetrics": {
+    "weight": 74.67961808522432,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 63
+  },
+  "scores": {
+    "nutrition": 89,
+    "exercise": 100,
+    "hydration": 75,
+    "sleep": 100,
+    "weight": 53,
+    "overall": 83
+  },
+  "createdAt": {
+    "$date": "2025-07-02T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-02T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e05"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-07-01T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2108,
+    "targetCalories": 2233,
+    "totalProtein": 118.39999999999999,
+    "totalCarbs": 268.7,
+    "totalFat": 69.7,
+    "totalFiber": 30,
+    "waterIntake": 1648,
+    "exerciseMinutes": 59,
+    "steps": 9999,
+    "sleep": 7.3
+  },
+  "bodyMetrics": {
+    "weight": 74.1797522708283,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 66
+  },
+  "scores": {
+    "nutrition": 94,
+    "exercise": 100,
+    "hydration": 82,
+    "sleep": 100,
+    "weight": 58,
+    "overall": 87
+  },
+  "createdAt": {
+    "$date": "2025-07-01T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-01T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e06"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-06-30T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2240,
+    "targetCalories": 2233,
+    "totalProtein": 107.99999999999999,
+    "totalCarbs": 332.79999999999995,
+    "totalFat": 32.4,
+    "totalFiber": 31,
+    "waterIntake": 2135,
+    "exerciseMinutes": 24,
+    "steps": 9835,
+    "sleep": 6.6
+  },
+  "bodyMetrics": {
+    "weight": 74.63380744610072,
+    "height": 170,
+    "bmi": 25.8,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 69
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 80,
+    "hydration": 100,
+    "sleep": 73,
+    "weight": 54,
+    "overall": 81
+  },
+  "createdAt": {
+    "$date": "2025-06-30T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-30T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e07"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-06-29T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2060,
+    "targetCalories": 2233,
+    "totalProtein": 150.6,
+    "totalCarbs": 290.59999999999997,
+    "totalFat": 53.800000000000004,
+    "totalFiber": 29,
+    "waterIntake": 1807,
+    "exerciseMinutes": 46,
+    "steps": 5547,
+    "sleep": 7.4
+  },
+  "bodyMetrics": {
+    "weight": 74.39528853097103,
+    "height": 170,
+    "bmi": 25.7,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 65
+  },
+  "scores": {
+    "nutrition": 92,
+    "exercise": 100,
+    "hydration": 90,
+    "sleep": 100,
+    "weight": 56,
+    "overall": 88
+  },
+  "createdAt": {
+    "$date": "2025-06-29T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-29T08:38:18.829Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6885e57a7bf13bfe272e4e08"
+  },
+  "userId": {
+    "$oid": "686a32b42bf267cc23846bb6"
+  },
+  "date": {
+    "$date": "2025-06-28T08:38:18.829Z"
+  },
+  "stats": {
+    "totalCalories": 2625,
+    "targetCalories": 2233,
+    "totalProtein": 123.80000000000001,
+    "totalCarbs": 498.6,
+    "totalFat": 38.99999999999999,
+    "totalFiber": 37,
+    "waterIntake": 2014,
+    "exerciseMinutes": 42,
+    "steps": 9090,
+    "sleep": 7.2
+  },
+  "bodyMetrics": {
+    "weight": 75.10272282458303,
+    "height": 170,
+    "bmi": 26,
+    "age": 1,
+    "activityLevel": "moderately_active",
+    "healthScore": 69
+  },
+  "scores": {
+    "nutrition": 100,
+    "exercise": 100,
+    "hydration": 100,
+    "sleep": 100,
+    "weight": 50,
+    "overall": 90
+  },
+  "createdAt": {
+    "$date": "2025-06-28T08:38:18.829Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-28T08:38:18.829Z"
   },
   "__v": 0
 }]

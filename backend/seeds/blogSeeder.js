@@ -6,6 +6,17 @@ const dotenv = require('dotenv');
 // Load env vars
 dotenv.config();
 
+// Connect to database
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('MongoDB Connected...');
+  } catch (error) {
+    console.error('Database connection error:', error);
+    process.exit(1);
+  }
+};
+
 const blogPosts = [
   // Thực Phẩm Cơ Bản - Khoai Tây
   {
@@ -237,9 +248,7 @@ Nghiên cứu cho thấy chế độ ăn Địa Trung Hải giúp giảm nguy c�
 
 const seedBlog = async () => {
   try {
-    // Kết nối MongoDB
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log('Connected to MongoDB');
+    await connectDB();
 
     // Tìm user admin để làm author (nếu không có thì tạo)
     let adminUser = await User.findOne({ email: 'admin@healthyfood.com' });

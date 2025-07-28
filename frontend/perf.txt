@@ -1,0 +1,5 @@
+Code Splitting: Use React.lazy and Suspense for routes.
+Memoization: Use useMemo and useCallback for expensive calculations.
+Image Optimization: Implement lazy loading and responsive images.
+API Optimization: Add caching and request deduplication.
+Performance Monitoring: Add tools like Lighthouse or Web Vitals.

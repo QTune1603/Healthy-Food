@@ -13,7 +13,7 @@ const foodService = {
       if (search) queryParams.append('search', search);
       if (category && category !== 'all') queryParams.append('category', category);
 
-      const response = await axiosClient.get(/food?${queryParams});
+      const response = await axiosClient.get(`/food?${queryParams}`);
       return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy danh sách thực phẩm');
@@ -23,7 +23,7 @@ const foodService = {
   // Tìm kiếm thực phẩm
   searchFoods: async (query, limit = 10) => {
     try {
-      const response = await axiosClient.get(/food/search?q=${encodeURIComponent(query)}&limit=${limit});
+      const response = await axiosClient.get(`/food/search?q=${encodeURIComponent(query)}&limit=${limit}`);
       return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi tìm kiếm thực phẩm');
@@ -33,7 +33,7 @@ const foodService = {
   // Lấy thông tin một thực phẩm
   getFoodById: async (id) => {
     try {
-      const response = await axiosClient.get(/food/${id});
+      const response = await axiosClient.get(`/food/${id}`);
       return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi lấy thông tin thực phẩm');
@@ -63,7 +63,7 @@ const foodService = {
   // Cập nhật thực phẩm (admin)
   updateFood: async (id, foodData) => {
     try {
-      const response = await axiosClient.put(/food/${id}, foodData);
+      const response = await axiosClient.put(`/food/${id}`, foodData);
       return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi cập nhật thực phẩm');
@@ -73,7 +73,7 @@ const foodService = {
   // Xóa thực phẩm (admin)
   deleteFood: async (id) => {
     try {
-      const response = await axiosClient.delete(/food/${id});
+      const response = await axiosClient.delete(`/food/${id}`);
       return response;
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Lỗi khi xóa thực phẩm');

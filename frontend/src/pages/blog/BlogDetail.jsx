@@ -145,6 +145,7 @@ const BlogDetail = () => {
           src={post.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061'}
           alt={post.title}
           className="w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -378,6 +379,7 @@ const BlogDetail = () => {
                               src={relatedPost.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061'}
                               alt={relatedPost.title}
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                              loading="lazy"
                             />
                           </div>
                           <div className="flex-1 min-w-0">

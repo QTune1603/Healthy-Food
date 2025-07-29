@@ -308,6 +308,7 @@ const Account = () => {
             src={userData.avatar || 'https://i.pravatar.cc/300'}
             alt="Profile"
             className="h-40 w-40 rounded-full object-cover ring-4 ring-white shadow-lg transition-transform group-hover:scale-105"
+            loading="lazy"
           />
           <button
             onClick={() => document.getElementById('avatar-upload').click()}
@@ -806,6 +807,7 @@ const Account = () => {
                     src={userData.avatar || 'https://i.pravatar.cc/300'}
                     alt="Profile"
                     className="h-16 w-16 rounded-full object-cover ring-4 ring-[#3C493F]/10"
+                    loading="lazy"
                   />
                   <div>
                     <h2 className="text-lg font-semibold text-gray-900">{userData.fullName || 'User'}</h2>

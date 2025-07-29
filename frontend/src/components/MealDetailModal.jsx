@@ -89,6 +89,7 @@ const MealDetailModal = ({ isOpen, onClose, mealId }) => {
                 src={meal.image}
                 alt={meal.title}
                 className="w-full h-full object-cover rounded-t-2xl"
+                loading="lazy"
               />
               <div className="absolute bottom-4 left-4">
                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(meal.difficulty)}`}>

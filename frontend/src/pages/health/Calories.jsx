@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import MealDetailModal from '../../components/MealDetailModal';
 import { calorieService, mealSuggestionService } from '../../services';
 
@@ -17,17 +17,15 @@ const Calories = () => {
   const [error, setError] = useState('');
   const [mealSuggestions, setMealSuggestions] = useState([]);
   const [loadingMeals, setLoadingMeals] = useState(false);
-  const [calculationHistory, setCalculationHistory] = useState([]);
+  //const [calculationHistory, setCalculationHistory] = useState([]);
   
   // Modal state
   const [selectedMealId, setSelectedMealId] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Load latest calculation and meal suggestions on component mount
-  useEffect(() => {
-    loadLatestCalculation();
-    // loadMealSuggestions(); - Removed: now handled in loadLatestCalculation
-  }, []);
+  // Memoized values from results
+  const bmiCategory = useMemo(() => results?.bmiCategory || '', [results]);
+  const targetCalories = useMemo(() => results?.targetCalories || 0, [results]);
 
   // Load meal suggestions when results change - REMOVED TO AVOID CONFLICT
   // useEffect(() => {
@@ -36,7 +34,7 @@ const Calories = () => {
   //   }
   // }, [results]);
 
-  const loadLatestCalculation = async () => {
+  const loadLatestCalculation = useCallback(async () => {
     try {
       const response = await calorieService.getLatestCalculation();
       if (response.success && response.data) {
@@ -67,9 +65,9 @@ const Calories = () => {
       // Fallback to popular meals if error
       loadMealSuggestions();
     }
-  };
+  }, []);
 
-  const loadMealSuggestions = async () => {
+  const loadMealSuggestions = useCallback(async () => {
     try {
       setLoadingMeals(true);
       const response = await mealSuggestionService.getPopularMealSuggestions(6);
@@ -82,9 +80,9 @@ const Calories = () => {
     } finally {
       setLoadingMeals(false);
     }
-  };
+  }, []);
 
-  const loadMealSuggestionsByCalories = async (targetCalories) => {
+  const loadMealSuggestionsByCalories = useCallback(async (targetCalories) => {
     try {
       setLoadingMeals(true);
       const response = await mealSuggestionService.getMealSuggestionsByCalories(targetCalories, 'all', 6);
@@ -97,17 +95,17 @@ const Calories = () => {
     } finally {
       setLoadingMeals(false);
     }
-  };
+  }, []);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-  };
+  }, []);
 
-  const calculateCalories = async () => {
+  const calculateCalories = useCallback(async () => {
     const { height, weight, age, gender, activityLevel, goal } = formData;
     
     if (!height || !weight || !age) {
@@ -149,9 +147,9 @@ const Calories = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [formData, loadMealSuggestionsByCalories]);
 
-  const resetForm = () => {
+  const resetForm = useCallback(() => {
     setFormData({
       height: '',
       weight: '',
@@ -165,9 +163,9 @@ const Calories = () => {
     
     // Load popular meal suggestions when form is reset
     loadMealSuggestions();
-  };
+  }, [loadMealSuggestions]);
 
-  const getBMICategoryText = (category) => {
+  const getBMICategoryText = useCallback((category) => {
     switch (category) {
       case 'underweight':
         return 'Thiếu cân';
@@ -180,9 +178,9 @@ const Calories = () => {
       default:
         return category;
     }
-  };
+  }, []);
 
-  const getBMICategoryColor = (category) => {
+  const getBMICategoryColor = useCallback((category) => {
     switch (category) {
       case 'underweight':
         return 'text-blue-600 bg-blue-50';
@@ -195,21 +193,27 @@ const Calories = () => {
       default:
         return 'text-gray-600 bg-gray-50';
     }
-  };
+  }, []);
 
-  const formatDate = (dateString) => {
+  const formatDate = useCallback((dateString) => {
     return new Date(dateString).toLocaleDateString('vi-VN');
-  };
+  }, []);
 
-  const handleMealClick = (mealId) => {
+  const handleMealClick = useCallback((mealId) => {
     setSelectedMealId(mealId);
     setIsModalOpen(true);
-  };
+  }, []);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedMealId(null);
-  };
+  }, []);
+
+  // Load latest calculation and meal suggestions on component mount
+  useEffect(() => {
+    loadLatestCalculation();
+    // loadMealSuggestions(); - Removed: now handled in loadLatestCalculation
+  }, [loadLatestCalculation]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -406,7 +410,7 @@ const Calories = () => {
                   
                   <div className="text-center mb-6">
                     <div className="text-4xl font-light text-[#4d544e] mb-2">
-                      {results.targetCalories}
+                      {targetCalories}
                     </div>
                     <div className="text-lg text-gray-600 mb-1">kcal/ngày</div>
                     <div className="text-sm text-gray-500">{results.goalDescription}</div>
@@ -434,8 +438,8 @@ const Calories = () => {
                         <span className="text-gray-600">BMI</span>
                         <div className="text-right">
                           <span className="font-medium text-[#4d544e]">{results.bmi}</span>
-                          <span className={`ml-2 px-2 py-1 rounded-full text-xs ${getBMICategoryColor(results.bmiCategory)}`}>
-                            {getBMICategoryText(results.bmiCategory)}
+                          <span className={`ml-2 px-2 py-1 rounded-full text-xs ${getBMICategoryColor(bmiCategory)}`}>
+                            {getBMICategoryText(bmiCategory)}
                           </span>
                         </div>
                       </div>
@@ -484,9 +488,9 @@ const Calories = () => {
         <div className="mt-16 bg-white rounded-2xl p-8 shadow-sm">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-2xl font-light text-[#4d544e]">Gợi Ý Món Ăn</h3>
-            {results?.targetCalories && (
+            {targetCalories > 0 && (
               <div className="text-sm text-gray-600">
-                Phù hợp với {results.targetCalories} kcal/ngày
+                Phù hợp với {targetCalories} kcal/ngày
               </div>
             )}
           </div>
@@ -508,6 +512,7 @@ const Calories = () => {
                       src={meal.image}
                       alt={meal.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
                     />
                   </div>
                   <h4 className="font-medium text-[#4d544e] mb-1 group-hover:text-pink-500 transition-colors">

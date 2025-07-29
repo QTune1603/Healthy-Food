@@ -48,6 +48,7 @@ const Header = () => {
                   src={logo} 
                   alt="Healthy Food Logo" 
                   className="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <span className="text-xl font-bold">HEALTHY FOOD</span>

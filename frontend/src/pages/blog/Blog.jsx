@@ -290,6 +290,7 @@ const Blog = () => {
                     src={post.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061'}
                     alt={post.title}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">

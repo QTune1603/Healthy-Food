@@ -1,177 +1,173 @@
+import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { blogService } from '../../services';
+import { categoryMapping } from '../../config/blogCategories';
+import { generateCategoriesFromPosts, getAllItems } from './helpers';
+import React from 'react';
+
+// 🔹 Component PostItem (memoized để giảm re-render)
+const PostItem = React.memo(({ post, isLast, lastPostRef }) => (
+  <Link
+    ref={isLast ? lastPostRef : null}
+    to={`/blog/${post._id}`}
+    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+  >
+    <div className="relative h-64 overflow-hidden">
+      <img
+        src={post.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061'}
+        alt={post.title}
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+      <div className="absolute bottom-4 left-4 right-4">
+        <div className="flex items-center justify-between text-white text-sm">
+          <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
+            {categoryMapping[post.category] || post.category}
+          </span>
+          <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
+            {post.views || 0} lượt xem
+          </span>
+        </div>
+      </div>
+      {post.isFeatured && (
+        <div className="absolute top-4 left-4">
+          <span className="bg-[#3C493F] text-white px-2 py-1 rounded text-xs">
+            Nổi bật
+          </span>
+        </div>
+      )}
+    </div>
+    <div className="p-6">
+      <div className="mb-2">
+        <span className="text-xs text-gray-500">{post.parentCategory}</span>
+      </div>
+      <h3 className="text-xl font-light text-[#3C493F] mb-3 group-hover:text-[#3C493F]/70 transition-colors">
+        {post.title}
+      </h3>
+      <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed">
+        {post.excerpt || post.content?.substring(0, 100) + '...'}
+      </p>
+      <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
+        <span>{post.likes?.length || 0} lượt thích</span>
+        <span>{new Date(post.createdAt).toLocaleDateString('vi-VN')}</span>
+      </div>
+    </div>
+  </Link>
+));
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [posts, setPosts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState('');
 
-  // Mapping để hiển thị tên category đẹp hơn
-  const categoryMapping = {
-    'potatoes': 'Khoai Tây',
-    'vegetables': 'Rau Củ', 
-    'mushrooms': 'Nấm',
-    'fruits': 'Trái Cây',
-    'grains': 'Ngũ Cốc',
-    'proteins': 'Protein',
-    'dairy': 'Sản Phẩm Sữa',
-    'nuts': 'Hạt',
-    'herbs': 'Thảo Mộc',
-    'beverages': 'Đồ Uống',
-    'snacks': 'Đồ Ăn Vặt',
-    'desserts': 'Tráng Miệng',
-    'vegetarian': 'Món Chay',
-    'organic': 'Thực Phẩm Hữu Cơ',
-    'superfood': 'Siêu Thực Phẩm',
-    'vitamins': 'Vitamin & Khoáng Chất',
-    'diet': 'Chế Độ Ăn Uống'
-  };
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
 
-  const parentCategoryMapping = {
-    'Thực Phẩm Cơ Bản': '🥬',
-    'Món Ăn Đặc Biệt': '🍽️',
-    'Thông Tin Dinh Dưỡng': '📊'
-  };
+  const observerRef = useRef();
+  const cacheRef = useRef({});
 
-  // Fetch posts và categories từ API
   useEffect(() => {
-    fetchData();
+    const fetchAllCategories = async () => {
+      try {
+        const res = await blogService.getAllPosts({ page: 1, limit: 1000 });
+        if (res.success) {
+          const categoriesData = generateCategoriesFromPosts(res.data.posts || []);
+          setCategories(categoriesData);
+        }
+      } catch (err) {
+        console.error('Error fetching all categories:', err);
+      }
+    };
+    fetchAllCategories();
   }, []);
 
   useEffect(() => {
-    fetchPosts();
+    setPosts([]);
+    setPage(1);
+    fetchPosts(1, selectedCategory, true);
   }, [selectedCategory]);
 
-  const fetchData = async () => {
-    try {
-      setLoading(true);
-      const response = await blogService.getAllPosts();
-      
-      if (response.success) {
-        const allPosts = response.data.posts || [];
-        setPosts(allPosts);
-        
-        // Tạo categories từ dữ liệu posts
-        const categoriesData = generateCategoriesFromPosts(allPosts);
-        setCategories(categoriesData);
-      }
-    } catch (error) {
-      setError(error.message);
-      console.error('Error fetching data:', error);
-    } finally {
-      setLoading(false);
+  useEffect(() => {
+    if (selectedCategory === 'all' && page > 1) {
+      fetchPosts(page, selectedCategory);
     }
-  };
+  }, [page]);
 
-  const fetchPosts = async () => {
+  const fetchPosts = async (currentPage, category, isInitial = false) => {
     try {
-      setLoading(true);
+      if (isInitial) setInitialLoading(true);
+      else setLoadingMore(true);
+
+      const cacheKey = `${category}-${currentPage}`;
+      if (cacheRef.current[cacheKey]) {
+        setPosts((prev) =>
+          currentPage === 1
+            ? cacheRef.current[cacheKey]
+            : [...prev, ...cacheRef.current[cacheKey]]
+        );
+        if (isInitial) setInitialLoading(false);
+        else setLoadingMore(false);
+        return;
+      }
+
+      const limit = category === 'all' ? 9 : 12;
+
       let response;
-      
-      if (selectedCategory === 'all') {
-        response = await blogService.getAllPosts();
+      if (category === 'all') {
+        response = await blogService.getAllPosts({ page: currentPage, limit });
       } else {
-        response = await blogService.getPostsByCategory(selectedCategory);
+        const parentCat = categories.find(cat => cat.id === category);
+        const childCat = categories.flatMap(cat => cat.children).find(c => c.id === category);
+
+        if (parentCat) {
+          response = await blogService.getAllPosts({ parentCategory: parentCat.title, page: currentPage, limit });
+        } else if (childCat) {
+          response = await blogService.getAllPosts({ category: childCat.id.toLowerCase(), page: currentPage, limit });
+        }
       }
-      
+
       if (response.success) {
-        setPosts(response.data.posts || []);
+        const newPosts = response.data.posts || [];
+        cacheRef.current[cacheKey] = newPosts;
+        setPosts((prev) =>
+          currentPage === 1 ? newPosts : [...prev, ...newPosts]
+        );
+        setHasMore(category === 'all' ? response.data.totalPages > currentPage : false);
       }
     } catch (error) {
       setError(error.message);
-      console.error('Error fetching posts:', error);
     } finally {
-      setLoading(false);
+      if (isInitial) setInitialLoading(false);
+      else setLoadingMore(false);
     }
   };
 
-  const generateCategoriesFromPosts = (posts) => {
-    // Nhóm posts theo parentCategory
-    const groupedByParent = posts.reduce((acc, post) => {
-      const parent = post.parentCategory;
-      if (!acc[parent]) {
-        acc[parent] = [];
+  // 🔹 Infinite scroll observer + Prefetch next page
+  const lastPostRef = useCallback((node) => {
+    if (loadingMore) return;
+    if (observerRef.current) observerRef.current.disconnect();
+
+    observerRef.current = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && hasMore) {
+        setPage((prev) => {
+          const nextPage = prev + 1;
+          setTimeout(() => fetchPosts(nextPage + 1, selectedCategory), 0); // Prefetch page kế tiếp
+          return nextPage;
+        });
       }
-      acc[parent].push(post);
-      return acc;
-    }, {});
-
-    // Tạo structure categories từ dữ liệu thực
-    return Object.keys(groupedByParent).map(parentCategory => {
-      const postsInParent = groupedByParent[parentCategory];
-      
-      // Nhóm theo category con
-      const childCategories = postsInParent.reduce((acc, post) => {
-        const category = post.category;
-        if (!acc[category]) {
-          acc[category] = [];
-        }
-        acc[category].push(post);
-        return acc;
-      }, {});
-
-      return {
-        id: parentCategory.toLowerCase().replace(/\s+/g, '-'),
-        title: parentCategory,
-        description: getParentCategoryDescription(parentCategory),
-        icon: parentCategoryMapping[parentCategory] || '📋',
-        children: Object.keys(childCategories).map(category => ({
-          id: category,
-          title: categoryMapping[category] || category,
-          image: childCategories[category][0]?.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061',
-          description: getChildCategoryDescription(category),
-          count: `${childCategories[category].length} bài viết`,
-          posts: childCategories[category]
-        }))
-      };
     });
-  };
+    if (node) observerRef.current.observe(node);
+  }, [loadingMore, hasMore, selectedCategory]);
 
-  const getParentCategoryDescription = (parentCategory) => {
-    const descriptions = {
-      'Thực Phẩm Cơ Bản': 'Các loại thực phẩm thiết yếu hàng ngày',
-      'Món Ăn Đặc Biệt': 'Những món ăn có tính chất đặc biệt',
-      'Thông Tin Dinh Dưỡng': 'Kiến thức về dinh dưỡng và sức khỏe'
-    };
-    return descriptions[parentCategory] || 'Danh mục đặc biệt';
-  };
-
-  const getChildCategoryDescription = (category) => {
-    const descriptions = {
-      'potatoes': 'Khoai tây là nguồn cung cấp chất xơ và các chất dinh dưỡng thiết yếu cho cơ thể',
-      'vegetables': 'Rau củ giàu vitamin, khoáng chất và chất xơ, giúp tăng cường sức khỏe',
-      'mushrooms': 'Nấm giúp bảo vệ sức khỏe tim mạch và tăng cường hệ miễn dịch',
-      'vegetarian': 'Khám phá thế giới ẩm thực chay phong phú và bổ dưỡng',
-      'organic': 'Thực phẩm hữu cơ được trồng và chế biến theo phương pháp tự nhiên',
-      'superfood': 'Những thực phẩm có giá trị dinh dưỡng đặc biệt cao',
-      'vitamins': 'Tìm hiểu về các vitamin và khoáng chất thiết yếu',
-      'diet': 'Hướng dẫn xây dựng chế độ ăn uống khoa học'
-    };
-    return descriptions[category] || 'Danh mục thực phẩm tốt cho sức khỏe';
-  };
-
-  const getAllItems = () => {
-    return categories.flatMap(category => category.children);
-  };
-
-  const getFilteredItems = () => {
-    if (selectedCategory === 'all') {
-      return getAllItems();
-    }
-    const category = categories.find(cat => cat.id === selectedCategory);
-    if (category) {
-      return category.children;
-    }
-    // Tìm trong children
-    const allItems = getAllItems();
-    return allItems.filter(item => item.id === selectedCategory);
-  };
-
-  const filteredItems = getFilteredItems();
-  const featuredItem = filteredItems[0];
+  const allItems = useMemo(() => getAllItems(categories), [categories]);
+  const selectedCatInfo = useMemo(() => {
+    return categories.find(cat => cat.id === selectedCategory) || 
+           allItems.find(item => item.id === selectedCategory);
+  }, [categories, allItems, selectedCategory]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -219,8 +215,7 @@ const Blog = () => {
                 {category.title}
               </button>
             ))}
-            {/* Sub-categories */}
-            {getAllItems().map((item) => (
+            {allItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => setSelectedCategory(item.id)}
@@ -239,102 +234,60 @@ const Blog = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Category Description */}
-        {selectedCategory !== 'all' && (
+        {selectedCategory !== 'all' && selectedCatInfo && (
           <div className="mb-12 text-center">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl font-light text-[#3C493F] mb-4">
-                {categories.find(cat => cat.id === selectedCategory)?.title || 
-                 getAllItems().find(item => item.id === selectedCategory)?.title}
+                {selectedCatInfo.title}
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                {categories.find(cat => cat.id === selectedCategory)?.description ||
-                 getAllItems().find(item => item.id === selectedCategory)?.description}
+                {selectedCatInfo.description}
               </p>
             </div>
           </div>
         )}
 
-        {/* Loading State */}
-        {loading && (
+        {initialLoading && (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#3C493F]"></div>
           </div>
         )}
 
-        {/* Error State */}
         {error && (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">⚠️</div>
-            <h3 className="text-xl font-light text-[#3C493F] mb-2">
-              Có lỗi xảy ra
-            </h3>
+            <h3 className="text-xl font-light text-[#3C493F] mb-2">Có lỗi xảy ra</h3>
             <p className="text-gray-600 mb-4">{error}</p>
             <button 
-              onClick={fetchData}
+              onClick={() => !initialLoading && fetchPosts(1, selectedCategory, true)}
+              disabled={initialLoading}
               className="px-6 py-2 bg-[#3C493F] text-white rounded-lg hover:bg-[#3C493F]/80 transition-colors"
             >
-              Thử lại
+              {initialLoading ? 'Đang tải lại...' : 'Thử lại'}
             </button>
           </div>
         )}
 
-        {/* Posts Grid */}
-        {!loading && !error && posts.length > 0 && (
+        {!initialLoading && !error && posts.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <Link key={post._id} to={`/blog/${post._id}`} 
-                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={post.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061'}
-                    alt={post.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center justify-between text-white text-sm">
-                      <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
-                        {categoryMapping[post.category] || post.category}
-                      </span>
-                      <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
-                        {post.views || 0} lượt xem
-                      </span>
-                    </div>
-                  </div>
-                  {post.isFeatured && (
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-[#3C493F] text-white px-2 py-1 rounded text-xs">
-                        Nổi bật
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <div className="p-6">
-                  <div className="mb-2">
-                    <span className="text-xs text-gray-500">
-                      {post.parentCategory}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-light text-[#3C493F] mb-3 group-hover:text-[#3C493F]/70 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed">
-                    {post.excerpt || post.content?.substring(0, 100) + '...'}
-                  </p>
-                  <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
-                    <span>{post.likes?.length || 0} lượt thích</span>
-                    <span>{new Date(post.createdAt).toLocaleDateString('vi-VN')}</span>
-                  </div>
-                </div>
-              </Link>
+            {posts.map((post, index) => (
+              <PostItem
+                key={post._id}
+                post={post}
+                isLast={index === posts.length - 1}
+                lastPostRef={lastPostRef}
+              />
             ))}
+
+            {loadingMore && (
+              <div className="flex justify-center py-10 col-span-full">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#3C493F]"></div>
+              </div>
+            )}
           </div>
         )}
 
-        {/* Empty State */}
-        {!loading && !error && posts.length === 0 && (
+        {!initialLoading && !error && posts.length === 0 && (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🍽️</div>
             <h3 className="text-xl font-light text-[#3C493F] mb-2">
@@ -346,12 +299,11 @@ const Blog = () => {
           </div>
         )}
 
-        {/* Stats Section */}
-        {!loading && categories.length > 0 && (
+        {!initialLoading && categories.length > 0 && (
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-light text-[#3C493F] mb-2">
-                {getAllItems().reduce((sum, item) => sum + (item.posts?.length || 0), 0)}
+                {allItems.reduce((sum, item) => sum + (item.posts?.length || 0), 0)}
               </div>
               <div className="text-sm text-gray-500">Bài Viết</div>
             </div>
@@ -361,7 +313,7 @@ const Blog = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-light text-[#3C493F] mb-2">
-                {getAllItems().length}
+                {allItems.length}
               </div>
               <div className="text-sm text-gray-500">Danh Mục Con</div>
             </div>
@@ -376,4 +328,4 @@ const Blog = () => {
   );
 };
 
-export default Blog; 
+export default Blog;

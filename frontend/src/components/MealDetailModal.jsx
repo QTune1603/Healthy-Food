@@ -1,10 +1,13 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { mealSuggestionService } from '../services';
 
-const MealDetailModal = ({ isOpen, onClose, mealId }) => {
+const MealDetailModal = React.memo(({ isOpen, onClose, mealId }) => {
   const [meal, setMeal] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Cache món ăn đã load
+  const mealCache = useRef({});
 
   useEffect(() => {
     if (isOpen && mealId) {
@@ -14,15 +17,20 @@ const MealDetailModal = ({ isOpen, onClose, mealId }) => {
 
   const loadMealDetail = async () => {
     try {
-      setLoading(true);
       setError('');
+      if (mealCache.current[mealId]) {
+        setMeal(mealCache.current[mealId]);
+        return;
+      }
+
+      setLoading(true);
       const response = await mealSuggestionService.getMealSuggestionById(mealId);
       if (response.success) {
+        mealCache.current[mealId] = response.data;
         setMeal(response.data);
       }
     } catch (error) {
       setError(error.message || 'Lỗi khi tải thông tin món ăn');
-      console.error('Load meal detail error:', error);
     } finally {
       setLoading(false);
     }
@@ -245,6 +253,6 @@ const MealDetailModal = ({ isOpen, onClose, mealId }) => {
       </div>
     </div>
   );
-};
+});
 
 export default MealDetailModal;

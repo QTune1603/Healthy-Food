@@ -1,40 +1,37 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { foodService, foodDiaryService, calorieService } from '../../services';
-import FoodList from './components/FoodList'; 
-import DailySummary from './components/DailySummary';
-import MealDistribution from './components/MealDistribution';
-import ConsumedFoodsTable from './components/ConsumedFoodsTable';
-import { Suspense } from 'react';
+import FoodList from './components/Calculator/FoodList';
+import DailySummary from './components/Calculator/DailySummary';
+import MealDistribution from './components/Calculator/MealDistribution';
+import ConsumedFoodsTable from './components/Calculator/ConsumedFoodsTable';
 
-
-const AddFoodModal = React.lazy(() => import('./components/AddFoodModal'));
+const AddFoodModal = React.lazy(() => import('./components/Calculator/AddFoodModal'));
 
 const Calculator = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  
+
   // State cho thực phẩm
   const [foods, setFoods] = useState([]);
   const [foodGroups, setFoodGroups] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  
+
   // State cho nhật ký tiêu thụ
   const [consumedFoods, setConsumedFoods] = useState([]);
   const [editingEntry, setEditingEntry] = useState(null);
-  
+
   // State cho tính toán calo
   const [calorieTarget, setCalorieTarget] = useState(null);
-  
+
   // Modal states
   const [showAddModal, setShowAddModal] = useState(false);
   const [selectedFood, setSelectedFood] = useState(null);
   const [quantity, setQuantity] = useState(100);
   const [selectedMealType, setSelectedMealType] = useState('breakfast');
-  
-  // Loading states
+
+  // Loading & error
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
 
   // Load danh sách thực phẩm
   const loadFoods = useCallback(async () => {
@@ -43,7 +40,7 @@ const Calculator = () => {
       const response = await foodService.getAllFoods({ limit: 1000 });
       const foodData = response.data?.foods || [];
       setFoods(foodData);
-      
+
       // Tạo danh sách nhóm thực phẩm
       const groups = [...new Set(foodData.map(food => food.category).filter(Boolean))];
       setFoodGroups(groups);
@@ -55,12 +52,41 @@ const Calculator = () => {
     }
   }, []);
 
-  // Load mục tiêu calo
+  // Load mục tiêu calo (cache + API)
   const loadCalorieTarget = useCallback(async () => {
     try {
-      const response = await calorieService.getLatestCalculation();
-      if (response.success) {
-        setCalorieTarget(response.data);
+      // Lấy từ localStorage trước
+      const cache = localStorage.getItem('latestCalories');
+      let shouldFetchAPI = true;
+
+      if (cache) {
+        try {
+          const parsed = JSON.parse(cache);
+          const cacheTime = parsed.updatedAt || 0;
+          const isExpired = Date.now() - cacheTime > 24 * 60 * 60 * 1000;
+
+          if (!isExpired && parsed.data) {
+            setCalorieTarget(parsed.data);
+            shouldFetchAPI = false; // Không cần gọi API nếu cache còn hạn
+          }
+        } catch (e) {
+          console.warn('Cache corrupted, skip:', e);
+        }
+      }
+
+      // Fetch API nếu cache hết hạn hoặc không có cache
+      if (shouldFetchAPI) {
+        const response = await calorieService.getLatestCalculation();
+        if (response.success) {
+          setCalorieTarget(response.data);
+          localStorage.setItem(
+            'latestCalories',
+            JSON.stringify({
+              data: response.data,
+              updatedAt: Date.now()
+            })
+          );
+        }
       }
     } catch (error) {
       console.error('Load calorie target error:', error);
@@ -73,13 +99,12 @@ const Calculator = () => {
       const dateStr = selectedDate.toISOString().split('T')[0];
       const response = await foodDiaryService.getDiaryByDate(dateStr);
       const diaryData = response.data || {};
-      
-      // Thêm ngày diary vào mỗi entry để hiển thị
+
       const entriesWithDate = (diaryData.entries || []).map(entry => ({
         ...entry,
         diaryDate: diaryData.date
       }));
-      
+
       setConsumedFoods(entriesWithDate);
     } catch (error) {
       console.error('Load consumed foods error:', error);
@@ -87,46 +112,48 @@ const Calculator = () => {
     }
   }, [selectedDate]);
 
-  // Load dữ liệu khi component mount
+  // Init load data
   useEffect(() => {
     loadFoods();
     loadCalorieTarget();
     loadConsumedFoods();
   }, [loadFoods, loadCalorieTarget, loadConsumedFoods]);
 
-  // Load dữ liệu khi ngày thay đổi
+  // Reload khi đổi ngày
   useEffect(() => {
     loadConsumedFoods();
   }, [selectedDate, loadConsumedFoods]);
 
-  // Lọc thực phẩm theo nhóm và tìm kiếm
+  // Lọc thực phẩm & thống kê
   const filteredFoods = useMemo(() => {
     return foods.filter(food => {
       const matchGroup = selectedGroup === 'all' || food.category === selectedGroup;
       const matchSearch = !searchTerm || food.name.toLowerCase().includes(searchTerm.toLowerCase());
       return matchGroup && matchSearch;
-    })
+    });
   }, [foods, selectedGroup, searchTerm]);
 
-  // Tính tổng calo đã tiêu thụ
-  const totalCalories = useMemo(() => 
+  const totalCalories = useMemo(() =>
     consumedFoods.reduce((sum, entry) => sum + (entry.calories || 0), 0),
-    [consumedFoods]);
+    [consumedFoods]
+  );
 
   const totalProtein = useMemo(() =>
     consumedFoods.reduce((sum, entry) => sum + (entry.protein || 0), 0),
-    [consumedFoods]);
+    [consumedFoods]
+  );
 
   const totalCarbs = useMemo(() =>
     consumedFoods.reduce((sum, entry) => sum + (entry.carbs || 0), 0),
-    [consumedFoods]);
+    [consumedFoods]
+  );
 
   const totalFat = useMemo(() =>
     consumedFoods.reduce((sum, entry) => sum + (entry.fat || 0), 0),
-    [consumedFoods]);
+    [consumedFoods]
+  );
 
-  // Mở modal thêm thực phẩm
-  // useCallback: Modal và CRUD
+  //Modal & CRUD
   const openAddModal = useCallback((food) => {
     setSelectedFood(food);
     setQuantity(100);
@@ -134,8 +161,7 @@ const Calculator = () => {
     setShowAddModal(true);
   }, []);
 
-  // Thêm thực phẩm vào nhật ký
-  const handleAddFood = useCallback (async () => {
+  const handleAddFood = useCallback(async () => {
     if (!selectedFood || !quantity) {
       alert('Vui lòng chọn thực phẩm và nhập số lượng');
       return;
@@ -158,15 +184,12 @@ const Calculator = () => {
     }
   }, [selectedFood, quantity, selectedMealType, selectedDate, loadConsumedFoods]);
 
-  // Chỉnh sửa entry
   const handleEditEntry = useCallback((entry) => {
-    setEditingEntry({...entry});
+    setEditingEntry({ ...entry });
   }, []);
 
-  // Lưu chỉnh sửa
   const handleSaveEdit = useCallback(async () => {
     if (!editingEntry) return;
-
     try {
       await foodDiaryService.updateFoodEntry(editingEntry._id, {
         quantity: parseFloat(editingEntry.quantity),
@@ -181,10 +204,8 @@ const Calculator = () => {
     }
   }, [editingEntry, loadConsumedFoods]);
 
-  // Xóa entry
   const handleDeleteEntry = useCallback(async (entryId) => {
     if (!confirm('Bạn có chắc chắn muốn xóa?')) return;
-
     try {
       await foodDiaryService.deleteFoodEntry(entryId);
       await loadConsumedFoods();
@@ -214,7 +235,7 @@ const Calculator = () => {
                 onChange={(e) => setSelectedDate(new Date(e.target.value))}
                 className="border border-gray-300 rounded px-3 py-2 text-sm"
               />
-              <button 
+              <button
                 onClick={loadConsumedFoods}
                 className="px-3 py-2 bg-[#3C493F] text-white rounded text-sm hover:bg-[#2a3329]"
               >
@@ -225,11 +246,9 @@ const Calculator = () => {
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          
-          {/* Left Column - Danh sách thực phẩm */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="p-4 border-b border-gray-200">
@@ -239,8 +258,6 @@ const Calculator = () => {
                   </div>
                 )}
               </div>
-
-              {/* Food List Table */}
               <FoodList
                 loading={loading}
                 filteredFoods={filteredFoods}
@@ -255,9 +272,7 @@ const Calculator = () => {
             </div>
           </div>
 
-          {/* Right Column - Thống kê và mục tiêu */}
           <div className="space-y-6">
-            {/* Daily Summary */}
             <DailySummary
               selectedDate={selectedDate}
               totalCalories={totalCalories}
@@ -266,17 +281,13 @@ const Calculator = () => {
               totalFat={totalFat}
               calorieTarget={calorieTarget}
             />
-
-
-            {/* Meal Distribution */}
-            <MealDistribution 
-              consumedFoods={consumedFoods} 
-              totalCalories={totalCalories} 
+            <MealDistribution
+              consumedFoods={consumedFoods}
+              totalCalories={totalCalories}
             />
           </div>
         </div>
 
-        {/* Bottom Table - Thống kê thực phẩm đã tiêu thụ */}
         <ConsumedFoodsTable
           consumedFoods={consumedFoods}
           editingEntry={editingEntry}
@@ -286,10 +297,8 @@ const Calculator = () => {
           handleSaveEdit={handleSaveEdit}
           handleDeleteEntry={handleDeleteEntry}
         />
-
       </div>
 
-      {/* Lazy load Add Food Modal */}
       <React.Suspense fallback={<div>Loading...</div>}>
         <AddFoodModal
           showAddModal={showAddModal}
@@ -302,7 +311,6 @@ const Calculator = () => {
           handleAddFood={handleAddFood}
         />
       </React.Suspense>
-
     </div>
   );
 };

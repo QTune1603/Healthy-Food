@@ -143,7 +143,7 @@ Cà chua hữu cơ thường có hàm lượng vitamin C cao hơn so với cà c
 
 Cà chua cũng chứa folate, kali và vitamin K. Folate quan trọng cho phụ nữ mang thai, kali giúp điều hòa huyết áp, và vitamin K hỗ trợ sức khỏe xương. Cà chua hữu cơ có thể ăn sống trong salad hoặc nấu chín trong các món xào, súp.`,
     excerpt: 'Cà chua hữu cơ giàu lycopene chống oxy hóa, vitamin C tăng miễn dịch và không chứa hóa chất độc hại.',
-    image: 'https://images.unsplash.com/photo-1546470427-e212b9d0b6e4?w=800',
+    image: 'https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/9/25/tac-dung-cua-ca-chua-doi-voi-suc-khoe-1-1632310636-831-width640height427-1632567723926-16325677242441321628137.jpg',
     category: 'organic',
     parentCategory: 'Món Ăn Đặc Biệt',
     tags: ['cà chua', 'hữu cơ', 'lycopene', 'vitamin C', 'chống oxy hóa'],
@@ -171,7 +171,7 @@ Protein trong hạt chia chứa đầy đủ các amino acid thiết yếu, tư�
 
 Hạt chia có thể ngâm với nước, sữa hoặc nước trái cây để tạo thành pudding. Cũng có thể rắc lên salad, sữa chua hoặc xay sinh tố. Hạt chia không có vị đặc biệt nên dễ kết hợp với nhiều món ăn khác nhau.`,
     excerpt: 'Hạt chia cung cấp omega-3 thực vật, chất xơ hòa tan và protein hoàn chỉnh, hỗ trợ sức khỏe não bộ và tim mạch.',
-    image: 'https://images.unsplash.com/photo-1609501676725-7186f295d41a?w=800',
+    image: 'https://bizweb.dktcdn.net/thumb/grande/100/432/482/products/0-408dd9ab-a934-4dd1-b389-0a89ce3cf176.jpg?v=1627716909570',
     category: 'superfood',
     parentCategory: 'Món Ăn Đặc Biệt',
     tags: ['hạt chia', 'omega-3', 'chất xơ', 'protein', 'siêu thực phẩm'],
@@ -267,15 +267,55 @@ const seedBlog = async () => {
     await BlogPost.deleteMany({});
     console.log('Cleared existing blog posts');
 
-    // Thêm author ID vào từng post
+    // Thêm author ID vào từng post mẫu
     const postsWithAuthor = blogPosts.map(post => ({
       ...post,
       author: adminUser._id
     }));
 
-    // Tạo blog posts mới
-    const createdPosts = await BlogPost.insertMany(postsWithAuthor);
+    // Clone thêm bài viết random để đủ dữ liệu test infinite scroll
+    const extraPosts = [];
+      for (let i = 0; i < 40; i++) {
+        const randomPost = blogPosts[Math.floor(Math.random() * blogPosts.length)];
+        extraPosts.push({
+          ...randomPost,
+          title: `${randomPost.title} - Bản mở rộng ${i + 1}`,
+          excerpt: `${randomPost.excerpt} (Bản mở rộng ${i + 1})`,
+          category: randomPost.category,
+          parentCategory: randomPost.parentCategory,
+          views: Math.floor(Math.random() * 100),
+          isFeatured: Math.random() < 0.1, // ít featured hơn bài gốc
+          createdAt: new Date(Date.now() - (i + 10) * 86400000), // clone cũ hơn bài gốc
+          author: adminUser._id
+        });
+      }
+
+
+
+    // Gộp tất cả posts
+    const allPosts = [...postsWithAuthor, ...extraPosts];
+
+    // Insert blog posts
+    const createdPosts = await BlogPost.insertMany(allPosts);
     console.log(`Created ${createdPosts.length} blog posts`);
+
+    // Test log categories cho organic và superfood
+    const testCategories = async () => {
+      const organicPosts = await BlogPost.find({ category: /organic/i });
+      console.log("🍅 Organic posts in DB:");
+      organicPosts.forEach(p => {
+        console.log(`Title: ${p.title}, category: "${p.category}", parent: "${p.parentCategory}"`);
+      });
+
+      const superfoodPosts = await BlogPost.find({ category: /superfood/i });
+      console.log("🌱 Superfood posts in DB:");
+      superfoodPosts.forEach(p => {
+        console.log(`Title: ${p.title}, category: "${p.category}", parent: "${p.parentCategory}"`);
+      });
+    };
+    testCategories();
+
+
 
     // In ra danh sách posts đã tạo
     createdPosts.forEach(post => {

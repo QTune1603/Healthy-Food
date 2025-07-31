@@ -38,7 +38,7 @@ const FoodList = React.memo(({
   
   //Xử lý debounce tìm kiếm
   const [debouncedSearchTerm, setDebounceSearchTerm] = useState(searchTerm);
-  const debouncedSearch = useMemo(() => debounce((term) => setSearchTerm(term), 500), [setSearchTerm]);
+  const debouncedSearch = useMemo(() => debounce((term) => setSearchTerm(term), 1000), [setSearchTerm]);
 
   const handleSearchChange = (e) => {
     const term = e.target.value;

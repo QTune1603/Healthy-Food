@@ -5,49 +5,50 @@ const BlogPost = require('../models/BlogPost');
 // @access  Public
 const getAllPosts = async (req, res) => {
   try {
-    const { category, parentCategory, search, page = 1, limit = 10 } = req.query;
+    let { category, parentCategory, search, page = 1, limit = 10 } = req.query;
     
-    let query = { isPublished: true };
-    
-    // Lọc theo category
-    if (category) {
-      query.category = category;
-    }
-    
-    // Lọc theo parent category
-    if (parentCategory) {
-      query.parentCategory = parentCategory;
-    }
-    
-    // Tìm kiếm
-    if (search) {
-      query.$text = { $search: search };
-    }
-    
-    const posts = await BlogPost.find(query)
-      .populate('author', 'fullName avatar')
-      .sort({ createdAt: -1 })
-      .limit(limit * 1)
-      .skip((page - 1) * limit);
-    
-    const total = await BlogPost.countDocuments(query);
-    
+    const pageNum = Math.max(parseInt(page, 10) || 1, 1);
+    const limitNum = Math.max(parseInt(limit, 10) || 10, 1);
+
+    const query = { isPublished: true };
+
+    if (category) query.category = new RegExp(`^${category}$`, 'i');
+    if (parentCategory) query.parentCategory = new RegExp(`^${parentCategory}$`, 'i');
+    if (search) query.$text = { $search: search };
+
+    const startTime = Date.now();
+
+    // Count & Fetch song song
+    const [total, posts] = await Promise.all([
+      BlogPost.countDocuments(query),
+      BlogPost.find(query)
+        .collation({ locale: 'en', strength: 2 })
+        .populate('author', 'fullName avatar')
+        .sort({ isFeatured: -1, createdAt: -1 })
+        .skip((pageNum - 1) * limitNum)
+        .limit(limitNum)
+    ]);
+
+    console.log(`Query done in ${Date.now() - startTime}ms`);
+
     res.json({
       success: true,
       data: {
         posts,
-        totalPages: Math.ceil(total / limit),
-        currentPage: page,
+        totalPages: Math.ceil(total / limitNum),
+        currentPage: pageNum,
+        hasNextPage: pageNum < Math.ceil(total / limitNum),
         total
       }
     });
+
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    console.error("❌ Error in getAllPosts:", error);
+    res.status(500).json({ success: false, message: error.message });
   }
 };
+
+module.exports = { getAllPosts };
 
 // @desc    Lấy bài viết theo ID
 // @route   GET /api/blog/:id

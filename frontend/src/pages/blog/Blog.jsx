@@ -1,60 +1,13 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { blogService } from '../../services';
-import { categoryMapping } from '../../config/blogCategories';
 import { generateCategoriesFromPosts, getAllItems } from './helpers';
 import React from 'react';
-
-// 🔹 Component PostItem (memoized để giảm re-render)
-const PostItem = React.memo(({ post, isLast, lastPostRef }) => (
-  <Link
-    ref={isLast ? lastPostRef : null}
-    to={`/blog/${post._id}`}
-    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
-  >
-    <div className="relative h-64 overflow-hidden">
-      <img
-        src={post.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061'}
-        alt={post.title}
-        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-      <div className="absolute bottom-4 left-4 right-4">
-        <div className="flex items-center justify-between text-white text-sm">
-          <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
-            {categoryMapping[post.category] || post.category}
-          </span>
-          <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded">
-            {post.views || 0} lượt xem
-          </span>
-        </div>
-      </div>
-      {post.isFeatured && (
-        <div className="absolute top-4 left-4">
-          <span className="bg-[#3C493F] text-white px-2 py-1 rounded text-xs">
-            Nổi bật
-          </span>
-        </div>
-      )}
-    </div>
-    <div className="p-6">
-      <div className="mb-2">
-        <span className="text-xs text-gray-500">{post.parentCategory}</span>
-      </div>
-      <h3 className="text-xl font-light text-[#3C493F] mb-3 group-hover:text-[#3C493F]/70 transition-colors">
-        {post.title}
-      </h3>
-      <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed">
-        {post.excerpt || post.content?.substring(0, 100) + '...'}
-      </p>
-      <div className="mt-4 flex items-center justify-between text-xs text-gray-500">
-        <span>{post.likes?.length || 0} lượt thích</span>
-        <span>{new Date(post.createdAt).toLocaleDateString('vi-VN')}</span>
-      </div>
-    </div>
-  </Link>
-));
+import GenericCategoryNav from "../../components/common/GenericCategoryNav";
+import BlogHero from "./components/BlogHero";
+import BlogCategoryDescription from "./components/BlogCategoryDescription";
+import BlogStats from "./components/BlogStats";
+import BlogPostItem from "./components/BlogPostItem";
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -172,79 +125,20 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-extralight text-[#3C493F] mb-6">
-              Khám Phá Ẩm Thực
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hành trình khám phá những món ăn lành mạnh và bổ dưỡng
-            </p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-      </div>
+      <BlogHero />
 
-      {/* Categories Navigation */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-wrap gap-4">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-[#3C493F] text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              <span className="mr-2">🍽️</span>
-              Tất Cả
-            </button>
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-[#3C493F] text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                <span className="mr-2">{category.icon}</span>
-                {category.title}
-              </button>
-            ))}
-            {allItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => setSelectedCategory(item.id)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 ${
-                  selectedCategory === item.id
-                    ? 'bg-[#3C493F] text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                {item.title}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Categories Navigation (reusable) */}
+      <GenericCategoryNav
+        mainCategories={categories}
+        subCategories={allItems}
+        selectedCategory={selectedCategory}
+        onSelect={setSelectedCategory}
+      />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {selectedCategory !== 'all' && selectedCatInfo && (
-          <div className="mb-12 text-center">
-            <div className="max-w-2xl mx-auto">
-              <h2 className="text-3xl font-light text-[#3C493F] mb-4">
-                {selectedCatInfo.title}
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                {selectedCatInfo.description}
-              </p>
-            </div>
-          </div>
+          <BlogCategoryDescription categoryInfo={selectedCatInfo} />
         )}
 
         {initialLoading && (
@@ -271,12 +165,12 @@ const Blog = () => {
         {!initialLoading && !error && posts.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <PostItem
-                key={post._id}
-                post={post}
-                isLast={index === posts.length - 1}
-                lastPostRef={lastPostRef}
-              />
+               <BlogPostItem
+                  key={post._id}
+                  post={post}
+                  isLast={index === posts.length - 1}
+                  lastPostRef={lastPostRef} 
+                />
             ))}
 
             {loadingMore && (
@@ -300,28 +194,14 @@ const Blog = () => {
         )}
 
         {!initialLoading && categories.length > 0 && (
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-light text-[#3C493F] mb-2">
-                {allItems.reduce((sum, item) => sum + (item.posts?.length || 0), 0)}
-              </div>
-              <div className="text-sm text-gray-500">Bài Viết</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-light text-[#3C493F] mb-2">{categories.length}</div>
-              <div className="text-sm text-gray-500">Danh Mục Chính</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-light text-[#3C493F] mb-2">
-                {allItems.length}
-              </div>
-              <div className="text-sm text-gray-500">Danh Mục Con</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-light text-[#3C493F] mb-2">24/7</div>
-              <div className="text-sm text-gray-500">Hỗ Trợ</div>
-            </div>
-          </div>
+          <BlogStats
+            totalPosts={allItems.reduce(
+              (sum, item) => sum + (item.posts?.length || 0),
+              0
+            )}
+            totalCategories={categories.length}
+            totalSubCategories={allItems.length}
+          />
         )}
       </div>
     </div>

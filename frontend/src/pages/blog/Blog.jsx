@@ -9,6 +9,15 @@ import BlogCategoryDescription from "./components/BlogCategoryDescription";
 import BlogStats from "./components/BlogStats";
 import BlogPostItem from "./components/BlogPostItem";
 
+const handlePrefetch = async (postId, category) => {
+  // Prefetch component BlogDetail
+  import('./BlogDetail');
+  // Prefetch API dữ liệu chi tiết
+  blogService.getPostById(postId).catch(() => {});
+  blogService.getPostsByCategory(category).catch(() => {});
+};
+
+
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [posts, setPosts] = useState([]);
@@ -170,6 +179,7 @@ const Blog = () => {
                   post={post}
                   isLast={index === posts.length - 1}
                   lastPostRef={lastPostRef} 
+                  onMouseEnter={() => handlePrefetch(post._id, post.category)}
                 />
             ))}
 

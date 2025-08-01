@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { categoryMapping } from '../../../config/blogCategories';
+import React from 'react'
 
 const BlogDetailSidebar = ({ post, relatedPosts }) => {
   return (
@@ -91,4 +92,4 @@ const BlogDetailSidebar = ({ post, relatedPosts }) => {
   );
 };
 
-export default BlogDetailSidebar;
+export default React.memo(BlogDetailSidebar);

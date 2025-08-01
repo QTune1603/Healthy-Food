@@ -56,4 +56,4 @@ const BlogPostItem = React.memo(({ post, isLast, lastPostRef }) => (
   </Link>
 ));
 
-export default BlogPostItem;
+export default React.memo(BlogPostItem);

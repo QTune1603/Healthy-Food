@@ -27,7 +27,7 @@ const BlogDetail = () => {
       if (response.success) {
         setPost(response.data);
         // Fetch related posts cùng category
-        await fetchRelatedPosts(response.data.category);
+        fetchRelatedPosts(response.data.category);
       }
     } catch (error) {
       setError(error.message);
